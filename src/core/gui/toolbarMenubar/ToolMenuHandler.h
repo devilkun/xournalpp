@@ -23,6 +23,7 @@
 #include <gtk/gtk.h>      // for GtkWidget, GtkWindow, GtkBuilder
 
 #include "gui/IconNameHelper.h"  // for IconNameHelper
+#include "model/PaperSize.h"
 #include "util/raii/GObjectSPtr.h"
 
 class AbstractToolItem;
@@ -45,6 +46,7 @@ class PageTypeSelectionPopover;
 class PageType;
 struct Palette;
 class StylePopoverFactory;
+class Recolor;
 
 class ToolMenuHandler {
 public:
@@ -75,6 +77,13 @@ public:
      */
     void updateColorToolItems(const Palette& palette);
 
+    /**
+     * @brief Update all ColorToolItems based on recolor settings
+     *
+     * @param recolor
+     */
+    void updateColorToolItemsRecoloring(const std::optional<Recolor>& recolor);
+
     void initToolItems();
     void addPluginItem(ToolbarButtonEntry* t);
 
@@ -95,6 +104,7 @@ public:
     std::string iconName(const char* icon);
 
     void setDefaultNewPageType(const std::optional<PageType>& pt);
+    void setDefaultNewPaperSize(const std::optional<PaperSize>& paperSize);
 
 private:
     template <class tool_item, class... Args>

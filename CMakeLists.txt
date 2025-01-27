@@ -11,7 +11,7 @@ endif()
 ## Project related Variables
 ## Also update changelog in debian folder!
 project(xournalpp
-        VERSION 1.2.4
+        VERSION 1.2.5
         DESCRIPTION "Xournal++ - Open source hand note-taking program"
         HOMEPAGE_URL "https://xournalpp.github.io/"
         LANGUAGES CXX C)
@@ -52,6 +52,20 @@ string(TIMESTAMP PACKAGE_TIMESTAMP "%Y%m%d.%H%M" UTC)
 
 include(TargetArch)
 target_architecture(PACKAGE_ARCH)
+
+
+if (UNIX AND NOT APPLE AND NOT CYGWIN)
+    set(INSTALL_DESKTOP_FILES true)
+endif()
+
+## I18n ##
+add_subdirectory(po)
+option (ONLY_CONFIGURE_FOR_TARGET_POT "Only configure the pot target" OFF)
+if (ONLY_CONFIGURE_FOR_TARGET_POT)
+    # We dont need anything else for just generating the .pot file.
+    # This avoids having to install all the dependencies in the CI runs updating the translation files
+    return()
+endif ()
 
 configure_file(cmake/VERSION.in VERSION)
 
@@ -120,10 +134,6 @@ if (ENABLE_PROFILING)
 endif (ENABLE_PROFILING)
 
 pkg_check_modules(ExternalModules REQUIRED IMPORTED_TARGET ${pkg-module-spec})
-
-if (UNIX AND NOT APPLE AND NOT CYGWIN)
-    set(INSTALL_DESKTOP_FILES true)
-endif()
 
 find_package(ZLIB REQUIRED)
 find_package(Threads REQUIRED)
@@ -205,9 +215,6 @@ configure_file(
         src/filesystem.h.in
         src/filesystem.h
 )
-
-## I18n ##
-add_subdirectory(po)
 
 ## Configuration headers and development options ##
 
@@ -366,9 +373,6 @@ Configuration:
     Filesystem library:         ${CXX_FILESYSTEM_NAMESPACE}
     Profiling enabled:          ${ENABLE_PROFILING}
 ")
-
-option(CMAKE_DEBUG_INCLUDES_LDFLAGS "List include dirs and ldflags for xournalpp target" OFF)
-mark_as_advanced(FORCE CMAKE_DEBUG_INCLUDES_LDFLAGS)
 
 ##############################
 # Packaging options
