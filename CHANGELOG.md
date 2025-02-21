@@ -1,6 +1,28 @@
 # Changelog
 
-## 1.2.4+dev (Unreleased)
+## 1.2.6+dev (Unreleased)
+
+## 1.2.6
+
+* Fixed a weird behaviour when drawing the outline of the compass multiple times (#6265, #6256)
+* Exposed selected text to the windowing system for accessibility purposes (#6221, #6215)
+* MacOS: Fixed loading of jpeg images from the PDF background (#6184, #6167)
+* MacOS: Fixed CJK and Cyrillic font rendering (#6285, #3474)
+
+## 1.2.5
+
+Bugfixes from various community contributors.
+
+* Fixed a regression causing "Out of memory" error when exporting some PDF files on Windows (#6124)
+* Fixed a regression causing a crash when exporting on Linux (#6084)
+* Allow undo/redo for changes of page size (#6096)
+* Add Ctrl+= as a shortcut for zomming in (#6076)
+* Fixed a crash when importing some SVG images (#6087)
+* Make the geometry tools appear in the middle of the view (#6012)
+* Fixed labels in plugin manager (#5992)
+* Fixed missing translations in Windows releases (#5973)
+* Fixed many issues with Windows installer (#5988)
+* Updated translations
 
 ## 1.2.4
 

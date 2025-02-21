@@ -83,10 +83,12 @@
 #include "model/XojPage.h"                                       // for XojPage
 #include "pdf/base/XojPdfPage.h"                                 // for XojP...
 #include "plugin/PluginController.h"                             // for Plug...
+#include "settings/RecolorParameters.h"                          // for RecolorParameters
 #include "undo/AddUndoAction.h"                                  // for AddU...
 #include "undo/InsertDeletePageUndoAction.h"                     // for Inse...
 #include "undo/InsertUndoAction.h"                               // for Inse...
 #include "undo/MoveSelectionToLayerUndoAction.h"                 // for Move...
+#include "undo/PageSizeChangeUndoAction.h"                       // for PageSizeChangeUndoAction
 #include "undo/SwapUndoAction.h"                                 // for SwapUndoAction
 #include "undo/UndoAction.h"                                     // for Undo...
 #include "util/Assert.h"                                         // for xoj_assert
@@ -391,6 +393,14 @@ bool Control::toggleGeometryTool() {
     std::unique_ptr<InputHandlerClass> geometryToolInputHandler =
             std::make_unique<InputHandlerClass>(this->win->getXournal(), geometryToolController.get());
     geometryToolInputHandler->registerToPool(tool->getHandlerPool());
+    Range range = view->getVisiblePart();
+    if (range.isValid()) {
+        double originX = (range.minX + range.maxX) * .5;
+        double originY = (range.minY + range.maxY) * .5;
+        geometryToolController->translate(originX, originY);
+    } else {
+        geometryToolController->translate(view->getWidth() * .5, view->getHeight() * .5);
+    }
     xournal->input->setGeometryToolInputHandler(std::move(geometryToolInputHandler));
     geometryTool->notify();
     return true;
@@ -793,18 +803,27 @@ void Control::movePageTowardsEnd() {
     this->getScrollHandler()->scrollToPage(currentPageNo + 1);
 }
 
+/// Remove mnemonic indicators in menu labels
+static std::string removeMnemonics(std::string orig) {
+    std::regex reg("_(.)");
+    return std::regex_replace(orig, reg, "$1");
+}
+
 void Control::askInsertPdfPage(size_t pdfPage) {
     using Responses = enum { CANCEL = 1, AFTER = 2, END = 3 };
     std::vector<XojMsgBox::Button> buttons = {{_("Cancel"), Responses::CANCEL},
                                               {_("Insert after current page"), Responses::AFTER},
                                               {_("Insert at end"), Responses::END}};
 
+    // Must match the labels in main.glade and PageTypeHandler.cpp
+    std::string pathToMenuEntry = removeMnemonics(_("_Journal") + std::string(" → ") + _("Paper B_ackground") +
+                                                  std::string(" → ") + _("With PDF background"));
+
     XojMsgBox::askQuestion(this->getGtkWindow(),
                            FC(_F("Your current document does not contain PDF Page no {1}\n"
                                  "Would you like to insert this page?\n\n"
-                                 "Tip: You can select Journal → Paper Background → PDF Background "
-                                 "to insert a PDF page.") %
-                              static_cast<int64_t>(pdfPage + 1)),
+                                 "Tip: You can select {2} to insert a PDF page.") %
+                              static_cast<int64_t>(pdfPage + 1) % pathToMenuEntry),
                            "", buttons, [ctrl = this, pdfPage](int response) {
                                if (response == Responses::AFTER || response == Responses::END) {
                                    Document* doc = ctrl->getDocument();
@@ -930,10 +949,13 @@ void Control::paperFormat() {
             this->gladeSearchPath, settings, page->getWidth(), page->getHeight(),
             [ctrl = this, page](double width, double height) {
                 ctrl->doc->lock();
+                double oldW = page->getWidth();
+                double oldH = page->getHeight();
                 Document::setPageSize(page, width, height);
                 size_t pageNo = ctrl->doc->indexOf(page);
                 size_t pageCount = ctrl->doc->getPageCount();
                 ctrl->doc->unlock();
+                ctrl->undoRedo->addUndoAction(std::make_unique<PageSizeChangeUndoAction>(page, oldW, oldH));
                 if (pageNo != npos && pageNo < pageCount) {
                     ctrl->firePageSizeChanged(pageNo);
                 }
@@ -1310,6 +1332,7 @@ void Control::showSettings() {
         bool highlightPosition;
         SidebarNumberingStyle sidebarStyle;
         std::optional<std::filesystem::path> colorPaletteSetting;
+        RecolorParameters recolorParameters;
     } settingsBeforeDialog = {
             settings->getBorderColor(),
             settings->getAddVerticalSpace(),
@@ -1323,6 +1346,7 @@ void Control::showSettings() {
             settings->isHighlightPosition(),
             settings->getSidebarNumberingStyle(),
             settings->getColorPaletteSetting(),
+            settings->getRecolorParameters(),
     };
 
     auto dlg = xoj::popup::PopupWindowWrapper<SettingsDialog>(
@@ -1384,10 +1408,24 @@ void Control::showSettings() {
                     ctrl->getCursor()->updateCursor();
                 }
 
+
+                bool reloadToolbars = false;
                 if (settingsBeforeDialog.colorPaletteSetting.has_value() &&
                     settingsBeforeDialog.colorPaletteSetting.value() != settings->getColorPaletteSetting()) {
                     ctrl->loadPaletteFromSettings();
                     ctrl->getWindow()->getToolMenuHandler()->updateColorToolItems(ctrl->getPalette());
+                    reloadToolbars = true;
+                }
+
+                if (settingsBeforeDialog.recolorParameters != settings->getRecolorParameters()) {
+                    ctrl->getWindow()->getToolMenuHandler()->updateColorToolItemsRecoloring(
+                            settings->getRecolorParameters().recolorizeMainView ?
+                                    std::make_optional(settings->getRecolorParameters().recolor) :
+                                    std::nullopt);
+                    reloadToolbars = true;
+                }
+
+                if (reloadToolbars) {
                     ctrl->getWindow()->reloadToolbars();
                 }
 
@@ -2067,6 +2105,45 @@ void Control::initButtonTool() {
 void Control::showAbout() {
     auto popup = xoj::popup::PopupWindowWrapper<xoj::popup::AboutDialog>(this->gladeSearchPath);
     popup.show(GTK_WINDOW(this->win->getWindow()));
+}
+
+static void onGtkDemoShown(GObject* proc_object, GAsyncResult* res, gpointer) {
+    gboolean success = g_subprocess_wait_finish(G_SUBPROCESS(proc_object), res, NULL);
+
+    if (success) {
+        g_message("Gtk demo run successfully!\n");
+    } else {
+        g_message("Something went wrong running the Gtk demo!\n");
+    }
+}
+
+void Control::showGtkDemo() {
+    std::string binary = "gtk3-demo";
+#ifdef __APPLE__
+    if (!xoj::util::OwnedCString::assumeOwnership(g_find_program_in_path(binary.c_str()))) {
+        // Try absolute path for binary
+        auto path = Stacktrace::getExePath() / binary;
+
+        binary = path.string();
+    }
+#endif
+    gchar* prog = g_find_program_in_path(binary.c_str());
+    if (!prog) {
+        XojMsgBox::showErrorToUser(getGtkWindow(), "gtk3-demo was not found in path");
+        return;
+    }
+    GError* err = nullptr;
+    GSubprocess* process = g_subprocess_new(G_SUBPROCESS_FLAGS_NONE, &err, prog, nullptr);
+    g_free(prog);
+
+    if (err != nullptr) {
+        std::string message =
+                FS(_F("Creating Gtk demo subprocess failed: {1} (exit code: {2})") % err->message % err->code);
+        XojMsgBox::showErrorToUser(getGtkWindow(), message);
+        g_error_free(err);
+    }
+
+    g_subprocess_wait_async(process, nullptr, reinterpret_cast<GAsyncReadyCallback>(onGtkDemoShown), nullptr);
 }
 
 auto Control::loadViewMode(ViewModeId mode) -> bool {

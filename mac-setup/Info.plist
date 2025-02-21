@@ -16,9 +16,9 @@
     <string>Xournal++</string>
 
     <key>CFBundleShortVersionString</key>
-    <string>1.2.4+dev</string>
+    <string>1.2.6+dev</string>
     <key>CFBundleVersion</key>
-    <string>1.2.4+dev.0</string>
+    <string>1.2.6+dev.0</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>NSHumanReadableCopyright</key>
@@ -181,6 +181,12 @@
     <true />
     <key>NSDownloadsUbiquitousContents</key>
     <true />
+
+    <key>LSEnvironment</key>
+    <dict>
+        <key>DYLD_FALLBACK_LIBRARY_PATH</key>
+        <string>/Applications/Xournal++.app/Contents/Resources/lib</string>
+    </dict>
 
     <key>NSHighResolutionCapable</key>
     <true />

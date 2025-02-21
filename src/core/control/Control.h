@@ -150,6 +150,7 @@ public:
 
     // Menu Help
     void showAbout();
+    void showGtkDemo();
 
     /**
      * @brief Update the Cursor and the Toolbar based on the active color
@@ -364,7 +365,6 @@ protected:
     void setRotationSnapping(bool enable);
     void setGridSnapping(bool enable);
 
-    bool showSaveDialog();
     void showFontDialog();
     void showColorChooserDialog();
 

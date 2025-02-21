@@ -152,19 +152,20 @@ auto Document::createSaveFilename(DocumentType type, const std::string& defaultS
             return p;
         }
     } else if (!pdfFilepath.empty()) {
-        wildcardString = SaveNameUtils::parseFilenameFromWildcardString(defaultPdfName, this->pdfFilepath.filename());
+        wildcardString = SaveNameUtils::parseFilenameFromWildcardString(defaultPdfName, this->pdfFilepath.filename(),
+                                                                        this->filepath.filename());
     } else if (!filepath.empty()) {
-        wildcardString = SaveNameUtils::parseFilenameFromWildcardString(defaultPdfName, this->filepath.filename());
+        wildcardString = SaveNameUtils::parseFilenameFromWildcardString(defaultPdfName, this->filepath.filename(),
+                                                                        this->filepath.filename());
     }
 
-    std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
-
     auto format_str = wildcardString.empty() ? defaultSaveName : wildcardString;
+
+    std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
     auto format = converter.from_bytes(format_str);
 
     // Todo (cpp20): use <format>
     std::wostringstream ss;
-    ss.imbue(std::locale());
     time_t curtime = time(nullptr);
     ss << std::put_time(localtime(&curtime), format.c_str());
     auto filename = ss.str();
@@ -174,7 +175,10 @@ auto Document::createSaveFilename(DocumentType type, const std::string& defaultS
             c = '_';
         }
     }
-    fs::path p = filename;
+
+    auto fn2 = converter.to_bytes(filename);
+    auto p = fs::u8path(fn2);
+
     Util::clearExtensions(p);
     return p;
 }

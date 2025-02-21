@@ -155,14 +155,29 @@ struct ActionProperties<Action::REDO> {
 };
 template <>
 struct ActionProperties<Action::CUT> {
+#ifdef __APPLE__
+    static constexpr const char* accelerators[] = {"<Meta>X", "Cut", nullptr};
+#else
+    static constexpr const char* accelerators[] = {"<Ctrl>X", "Cut", nullptr};
+#endif
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->cut(); }
 };
 template <>
 struct ActionProperties<Action::COPY> {
+#ifdef __APPLE__
+    static constexpr const char* accelerators[] = {"<Meta>C", "Copy", nullptr};
+#else
+    static constexpr const char* accelerators[] = {"<Ctrl>C", "Copy", nullptr};
+#endif
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->copy(); }
 };
 template <>
 struct ActionProperties<Action::PASTE> {
+#ifdef __APPLE__
+    static constexpr const char* accelerators[] = {"<Meta>V", "Paste", nullptr};
+#else
+    static constexpr const char* accelerators[] = {"<Ctrl>V", "Paste", nullptr};
+#endif
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->paste(); }
 };
 template <>
@@ -382,6 +397,11 @@ struct ActionProperties<Action::SHOW_MENUBAR> {
  */
 template <>
 struct ActionProperties<Action::ZOOM_IN> {
+#ifdef __APPLE__
+    static constexpr const char* accelerators[] = {"<Meta>plus", "<Meta>KP_Add", "<Meta>equal", nullptr};
+#else
+    static constexpr const char* accelerators[] = {"<Ctrl>plus", "<Ctrl>KP_Add", "<Ctrl>equal", nullptr};
+#endif
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) {
         Util::execInUiThread([zoom = ctrl->getZoomControl()]() { zoom->zoomOneStep(ZOOM_IN); });
     }
@@ -389,6 +409,11 @@ struct ActionProperties<Action::ZOOM_IN> {
 
 template <>
 struct ActionProperties<Action::ZOOM_OUT> {
+#ifdef __APPLE__
+    static constexpr const char* accelerators[] = {"<Meta>minus", "<Meta>KP_Subtract", nullptr};
+#else
+    static constexpr const char* accelerators[] = {"<Ctrl>minus", "<Ctrl>KP_Subtract", nullptr};
+#endif
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) {
         Util::execInUiThread([zoom = ctrl->getZoomControl()]() { zoom->zoomOneStep(ZOOM_OUT); });
     }
@@ -850,6 +875,12 @@ template <>
 struct ActionProperties<Action::HELP> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { XojMsgBox::showHelp(ctrl->getGtkWindow()); }
 };
+
+template <>
+struct ActionProperties<Action::DEMO> {
+    static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->showGtkDemo(); }
+};
+
 template <>
 struct ActionProperties<Action::ABOUT> {
     using app_namespace = std::true_type;

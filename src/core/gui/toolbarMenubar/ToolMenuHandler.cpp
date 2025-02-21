@@ -3,7 +3,8 @@
 #include <algorithm>  // for max
 #include <sstream>    // for istringstream
 
-#include "control/Control.h"                 // for Control
+#include "control/Control.h"                         // for Control
+#include "control/PageBackgroundChangeController.h"  // for PageBackgroundChangeController
 #include "control/ScrollHandler.h"           // for ScrollHandler
 #include "control/actions/ActionDatabase.h"  // for ActionDatabase
 #include "control/settings/Settings.h"       // for Settings
@@ -56,9 +57,8 @@ ToolMenuHandler::ToolMenuHandler(Control* control, GladeGui* gui):
         tbModel(std::make_unique<ToolbarModel>()),
         pageBackgroundChangeController(control->getPageBackgroundChangeController()),
         iconNameHelper(control->getSettings()),
-        pageTypeSelectionPopup(std::make_unique<PageTypeSelectionPopover>(
-                control->getPageTypes(), control->getPageBackgroundChangeController(), control->getSettings(),
-                GTK_APPLICATION_WINDOW(parent))) {}
+        pageTypeSelectionPopup(std::make_unique<PageTypeSelectionPopover>(control, control->getSettings(),
+                                                                          GTK_APPLICATION_WINDOW(parent))) {}
 
 void ToolMenuHandler::populate(const GladeSearchpath* gladeSearchPath) {
     initToolItems();
@@ -98,6 +98,9 @@ void ToolMenuHandler::unloadToolbar(GtkWidget* toolbar) {
 void ToolMenuHandler::load(const ToolbarData* d, GtkWidget* toolbar, const char* toolbarName, bool horizontal) {
     int count = 0;
     const auto palette = this->control->getPalette();
+
+    const auto& recolorParams = control->getSettings()->getRecolorParameters();
+    auto recolor = recolorParams.recolorizeMainView ? std::make_optional(recolorParams.recolor) : std::nullopt;
 
     for (const ToolbarEntry& e: d->contents) {
         if (e.getName() == toolbarName) {
@@ -144,7 +147,8 @@ void ToolMenuHandler::load(const ToolbarData* d, GtkWidget* toolbar, const char*
 
                     count++;
                     const NamedColor& namedColor = palette.getColorAt(paletteIndex);
-                    auto& item = this->toolbarColorItems.emplace_back(std::make_unique<ColorToolItem>(namedColor));
+                    auto& item =
+                            this->toolbarColorItems.emplace_back(std::make_unique<ColorToolItem>(namedColor, recolor));
 
                     auto it = item->createToolItem(horizontal);
                     gtk_toolbar_insert(GTK_TOOLBAR(toolbar), GTK_TOOL_ITEM(it.get()), -1);
@@ -318,6 +322,7 @@ void ToolMenuHandler::initToolItems() {
     emplaceCustomItemTgl("PRESENTATION_MODE", Cat::NAVIGATION, Action::PRESENTATION_MODE, "presentation-mode",
                          _("Presentation mode"));
     emplaceCustomItemTgl("FULLSCREEN", Cat::NAVIGATION, Action::FULLSCREEN, "fullscreen", _("Toggle fullscreen"));
+    emplaceCustomItemTgl("SHOW_SIDEBAR", Cat::NAVIGATION, Action::SHOW_SIDEBAR, "sidebar-show", _("Toggle sidebar"));
 
     emplaceCustomItem("MANAGE_TOOLBAR", Cat::MISC, Action::MANAGE_TOOLBAR, "toolbars-manage", _("Manage Toolbars"));
     emplaceCustomItem("CUSTOMIZE_TOOLBAR", Cat::MISC, Action::CUSTOMIZE_TOOLBAR, "toolbars-customize",
@@ -515,6 +520,16 @@ void ToolMenuHandler::updateColorToolItems(const Palette& palette) {
     }
 }
 
+void ToolMenuHandler::updateColorToolItemsRecoloring(const std::optional<Recolor>& recolor) {
+    for (const auto& it: this->toolbarColorItems) {
+        it->updateSecondaryColor(recolor);
+    }
+}
+
 void ToolMenuHandler::setDefaultNewPageType(const std::optional<PageType>& pt) {
-    this->pageTypeSelectionPopup->setSelected(pt);
+    this->pageTypeSelectionPopup->setSelectedPT(pt);
+    this->control->getPageBackgroundChangeController()->setPageTypeForNewPages(pt);
+}
+void ToolMenuHandler::setDefaultNewPaperSize(const std::optional<PaperSize>& paperSize) {
+    this->pageTypeSelectionPopup->setSelectedPaperSize(paperSize);
 }

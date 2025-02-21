@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 08:09+0000\n"
-"PO-Revision-Date: 2024-10-17 16:12\n"
+"POT-Creation-Date: 2025-01-27 08:42+0000\n"
+"PO-Revision-Date: 2025-02-09 04:25\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "Language: ca_ES\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: xournalpp\n"
 "X-Crowdin-Project-ID: 363247\n"
 "X-Crowdin-Language: ca\n"
-"X-Crowdin-File: /[xournalpp.xournalpp] master/po/xournalpp.pot\n"
-"X-Crowdin-File-ID: 16\n"
+"X-Crowdin-File: /master/xournalpp.pot\n"
+"X-Crowdin-File-ID: 38\n"
 
 #: ../src/core/control/AudioController.cpp:120
 msgid "Audio folder not set or invalid! Recording won't work!\n"
@@ -23,60 +23,73 @@ msgid "Audio folder not set or invalid! Recording won't work!\n"
 msgstr "No s'ha establert una carpeta d'àudio o bé no és vàlida! La gravació no funcionarà!\n"
 "Configureu la carpeta d'enregistrament a «Configuració → Gravació d'àudio»."
 
-#: ../src/core/control/Control.cpp:227
+#: ../src/core/control/Control.cpp:229
 msgid "Filesystem error: {1}"
 msgstr "Error del sistema de fitxers: {1}"
 
-#: ../src/core/control/Control.cpp:239
+#: ../src/core/control/Control.cpp:241
 msgid "Could not remove old autosave file \"{1}\": {2}"
 msgstr "El fitxer d'autodesada «{1}» no s'ha pogut esborrar: {2}"
 
-#: ../src/core/control/Control.cpp:551
+#: ../src/core/control/Control.cpp:561
 msgid "You deleted the active toolbar. Falling back to the default toolbar."
 msgstr "Heu esborrat la barra d'eines activa. S'aplica la barra d'eines per defecte."
 
-#: ../src/core/control/Control.cpp:571
+#: ../src/core/control/Control.cpp:581
 msgid "The Toolbarconfiguration \"{1}\" is predefined, would you create a copy to edit?"
 msgstr "La configuració de barres d'eines predefinida «{1}» no es pot modificar. En voleu fer una còpia i editar-la?"
 
-#: ../src/core/control/Control.cpp:574 ../src/core/control/Control.cpp:1516
+#: ../src/core/control/Control.cpp:584 ../src/core/control/Control.cpp:1554
 msgid "Yes"
 msgstr "Sí"
 
-#: ../src/core/control/Control.cpp:574 ../src/core/control/Control.cpp:1516
+#: ../src/core/control/Control.cpp:584 ../src/core/control/Control.cpp:1554
 msgid "No"
 msgstr "No"
 
-#: ../src/core/control/Control.cpp:798 ../src/core/control/Control.cpp:1683
-#: ../src/core/control/Control.cpp:2021 ../src/core/control/XournalMain.cpp:206
+#: ../src/core/control/Control.cpp:814 ../src/core/control/Control.cpp:1721
+#: ../src/core/control/Control.cpp:2059 ../src/core/control/XournalMain.cpp:175
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../src/core/control/Control.cpp:799
+#: ../src/core/control/Control.cpp:815
 msgid "Insert after current page"
 msgstr "Afegeix després de la pàgina actual"
 
-#: ../src/core/control/Control.cpp:800
+#: ../src/core/control/Control.cpp:816
 msgid "Insert at end"
 msgstr "Afegeix al final"
 
-#: ../src/core/control/Control.cpp:803
+#: ../src/core/control/Control.cpp:819
+msgid "_Journal"
+msgstr "_Quadern"
+
+#: ../src/core/control/Control.cpp:819
+msgid "Paper B_ackground"
+msgstr "_Fons del paper"
+
+#: ../src/core/control/Control.cpp:820
+#: ../src/core/control/pagetype/PageTypeHandler.cpp:40
+msgid "With PDF background"
+msgstr "Amb fons de PDF"
+
+#: ../src/core/control/Control.cpp:823
 msgid "Your current document does not contain PDF Page no {1}\n"
 "Would you like to insert this page?\n\n"
-"Tip: You can select Journal → Paper Background → PDF Background to insert a PDF page."
+"Tip: You can select {2} to insert a PDF page."
 msgstr "El document actual no té pàgina PDF número {1}.\n"
 "Voleu afegir aquesta pàgina?\n\n"
-"Tip: You can select Journal → Paper Background → PDF Background to insert a PDF page."
+"Consell: Podeu seleccionar {2} per a afegir una pàgina PDF."
 
-#: ../src/core/control/Control.cpp:847
+#: ../src/core/control/Control.cpp:866
 msgid "No pdf pages available to append. You may need to reopen the document first."
 msgstr "No hi ha pàgines PDF disponibles per a afegir. És possible que primer calgui reobrir el document."
 
-#: ../src/core/control/Control.cpp:861
+#: ../src/core/control/Control.cpp:880
 msgid "Unable to retrieve pdf page."
 msgstr "La pagina del pdf no es pot recuperar."
 
-#: ../src/core/control/Control.cpp:1441
+#: ../src/core/control/Control.cpp:1479
 msgid "Do not open Autosave files. They may will be overwritten!\n"
 "Copy the files to another folder.\n"
 "Files from Folder {1} cannot be opened."
@@ -84,100 +97,104 @@ msgstr "No obriu els fitxers de desada automàtica. Es poden sobreescriure!\n"
 "Copieu els fitxers a una altra carpeta.\n"
 "Els fitxers de la carpeta {1} no es poden obrir."
 
-#: ../src/core/control/Control.cpp:1461
+#: ../src/core/control/Control.cpp:1499
 msgid "file: {1}"
 msgstr "fitxer: {1}"
 
-#: ../src/core/control/Control.cpp:1493
+#: ../src/core/control/Control.cpp:1531
 msgid "Error opening file \"{1}\""
 msgstr "S'ha produït un error a l'obrir el fitxer «{1}»."
 
-#: ../src/core/control/Control.cpp:1518
+#: ../src/core/control/Control.cpp:1556
 msgid "File version mismatch"
 msgstr "La versió del fitxer és incompatible."
 
-#: ../src/core/control/Control.cpp:1519
+#: ../src/core/control/Control.cpp:1557
 msgid "The file being loaded has a file format version newer than the one currently supported by this version of Xournal++, so it may not load properly. Open anyways?"
 msgstr "El fitxer que s'ha carregat té un format de fitxer amb una versió posterior a la que suporta aquesta versió del Xournal++ i potser no es pugui carregar bé. Voleu obrir-lo igualment?"
 
-#: ../src/core/control/Control.cpp:1542
+#: ../src/core/control/Control.cpp:1580
 msgid "Error reading PDF file \"{1}\"\n"
 "{2}"
 msgstr "S'ha produït un error al llegir el fitxer PDF «{1}»."
 
-#: ../src/core/control/Control.cpp:1663
+#: ../src/core/control/Control.cpp:1701
 msgid "The attached background file could not be found. It might have been moved, renamed or deleted."
 msgstr "El fitxer de fons adjunt no s'ha pogut trobar. Potser s'ha mogut, se li ha canviat el nom o s'ha esborrat."
 
-#: ../src/core/control/Control.cpp:1666
+#: ../src/core/control/Control.cpp:1704
 msgid "The background file \"{1}\" could not be found. It might have been moved, renamed or deleted.\n"
 "It was last seen at: \"{2}\""
 msgstr "El fitxer de fons «1» no s'ha pogut trobar. Potser s'ha mogut, se li ha canviat el nom o s'ha esborrat. L'última ubicació on es va veure és «{2}»."
 
-#: ../src/core/control/Control.cpp:1676
+#: ../src/core/control/Control.cpp:1714
 msgid "\n"
 "Proposed replacement file: \"{1}\""
 msgstr "\n"
 "Arxiu de recanvi proposat: «{1}»"
 
-#: ../src/core/control/Control.cpp:1681
+#: ../src/core/control/Control.cpp:1719
 msgid "Select another PDF"
 msgstr "Tria un altre PDF"
 
-#: ../src/core/control/Control.cpp:1682
+#: ../src/core/control/Control.cpp:1720
 msgid "Remove PDF Background"
 msgstr "Elimina el fons PDF"
 
-#: ../src/core/control/Control.cpp:1686
+#: ../src/core/control/Control.cpp:1724
 msgid "Use proposed PDF"
 msgstr "Fes servir el PDF proposat"
 
-#: ../src/core/control/Control.cpp:1689
+#: ../src/core/control/Control.cpp:1727
 msgid "Missing PDF background file"
 msgstr "Falta el fitxer PDF de fons."
 
-#: ../src/core/control/Control.cpp:1821
+#: ../src/core/control/Control.cpp:1859
 msgid "Select font"
 msgstr "Tria una font"
 
-#: ../src/core/control/Control.cpp:1840
+#: ../src/core/control/Control.cpp:1878
 #: ../src/core/gui/toolbarMenubar/ColorSelectorToolItem.cpp:57
 msgid "Select color"
 msgstr "Tria un color"
 
-#: ../src/core/control/Control.cpp:1865
+#: ../src/core/control/Control.cpp:1903
 msgid "Unsaved Document"
 msgstr "Document sense desar"
 
-#: ../src/core/control/Control.cpp:2014
+#: ../src/core/control/Control.cpp:2052
 msgid "Document file was removed."
 msgstr "S'ha eliminat el fitxer del document."
 
-#: ../src/core/control/Control.cpp:2014
+#: ../src/core/control/Control.cpp:2052
 msgid "This document is not saved yet."
 msgstr "Aquest document encara no s'ha desat."
 
-#: ../src/core/control/Control.cpp:2016
+#: ../src/core/control/Control.cpp:2054
 msgid "Save As..."
 msgstr "Anomena i desa..."
 
-#: ../src/core/control/Control.cpp:2016 ../src/core/control/jobs/SaveJob.cpp:25
+#: ../src/core/control/Control.cpp:2054 ../src/core/control/jobs/SaveJob.cpp:25
 #: ../src/core/gui/dialog/XojSaveDlg.cpp:80
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:282
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:286
 msgid "Save"
 msgstr "Desa"
 
-#: ../src/core/control/Control.cpp:2019
+#: ../src/core/control/Control.cpp:2057
 msgid "Discard"
 msgstr "Descarta"
+
+#: ../src/core/control/Control.cpp:2141
+msgid "Creating Gtk demo subprocess failed: {1} (exit code: {2})"
+msgstr "No s'ha progut crear el subproceś de demostració de Gtk: {1} (codi d'error: {2})"
 
 #: ../src/core/control/CrashHandler.cpp:31
 msgid "Trying to emergency save the current open document..."
 msgstr "S'intenta fer una desada d'emergència del document obert actual..."
 
 #: ../src/core/control/CrashHandler.cpp:40
-#: ../src/core/control/XournalMain.cpp:309
-#: ../src/core/control/XournalMain.cpp:315
+#: ../src/core/control/XournalMain.cpp:278
+#: ../src/core/control/XournalMain.cpp:284
 msgid "Error: {1}"
 msgstr "Error: {1}"
 
@@ -253,13 +270,13 @@ msgstr "El fitxer PDF de LaTeX no s'ha pogut carregar: {1}"
 msgid "Could not load LaTeX PDF file"
 msgstr "El fitxer PDF de LaTeX no s'ha pogut carregar."
 
-#: ../src/core/control/PageBackgroundChangeController.cpp:93
+#: ../src/core/control/PageBackgroundChangeController.cpp:110
 #: ../src/core/control/xojfile/LoadHandler.cpp:471
 #: ../src/core/control/xojfile/LoadHandler.cpp:487
 msgid "Error reading PDF: {1}"
 msgstr "S'ha produït un error al llegir el PDF: {1}"
 
-#: ../src/core/control/PageBackgroundChangeController.cpp:215
+#: ../src/core/control/PageBackgroundChangeController.cpp:271
 msgid "You don't have any PDF pages to select from. Cancel operation.\n"
 "Please select another background type: Menu \"Journal\" → \"Configure Page Template\"."
 msgstr "No teniu pàgines PDF seleccionables. L'operació es cancel·la.\n"
@@ -273,71 +290,71 @@ msgstr "Falta el fons de PDF."
 msgid "Running print operation failed with {1}"
 msgstr "L'operació d'impressió en execució ha fallat amb {1}."
 
-#: ../src/core/control/XournalMain.cpp:154
+#: ../src/core/control/XournalMain.cpp:123
 msgid "Failed to delete file: {1}"
 msgstr "El fitxer no s'ha pogut esborrar: {1}"
 
-#: ../src/core/control/XournalMain.cpp:156
+#: ../src/core/control/XournalMain.cpp:125
 msgid "Please delete the file manually"
 msgstr "Esborreu el fitxer a mà."
 
-#: ../src/core/control/XournalMain.cpp:192
+#: ../src/core/control/XournalMain.cpp:161
 msgid "There is a recent errorlogfile from Xournal++. Please file a Bugreport, so the bug may be fixed."
 msgstr "Hi ha un fitxer de registre d'error del Xournal++. Si us plau, envieu un informe d'error per tal d'arreglar-ho."
 
-#: ../src/core/control/XournalMain.cpp:194
+#: ../src/core/control/XournalMain.cpp:163
 msgid "There are recent errorlogfiles from Xournal++. Please file a Bugreport, so the bug may be fixed."
 msgstr "Hi ha fitxers de registre d'error del Xournal++. Si us plau, envieu un informe d'error per tal d'arreglar-ho."
 
-#: ../src/core/control/XournalMain.cpp:197
+#: ../src/core/control/XournalMain.cpp:166
 msgid "The most recent log file name: {1}"
 msgstr "El nom del fitxer de registre més recent: {1}"
 
-#: ../src/core/control/XournalMain.cpp:199
+#: ../src/core/control/XournalMain.cpp:168
 msgid "To prevent this popup from reappearing, simply delete the errorlogfiles."
 msgstr "Per tal que aquest missatge emergent no torni a aparèixer, esborreu els fitxers de registres d'error."
 
-#: ../src/core/control/XournalMain.cpp:202
+#: ../src/core/control/XournalMain.cpp:171
 msgid "File Bug Report"
 msgstr "Informa d'un error"
 
-#: ../src/core/control/XournalMain.cpp:203
+#: ../src/core/control/XournalMain.cpp:172
 msgid "Open Logfile"
 msgstr "Obre el fitxer de registre"
 
-#: ../src/core/control/XournalMain.cpp:204
+#: ../src/core/control/XournalMain.cpp:173
 msgid "Open Logfile directory"
 msgstr "Obre el directori de fitxers de registre"
 
-#: ../src/core/control/XournalMain.cpp:205
+#: ../src/core/control/XournalMain.cpp:174
 msgid "Delete Logfile"
 msgstr "Elimina el fitxer de registre"
 
-#: ../src/core/control/XournalMain.cpp:207
+#: ../src/core/control/XournalMain.cpp:176
 msgid "Crash log"
 msgstr "Registre de fallades"
 
-#: ../src/core/control/XournalMain.cpp:229
+#: ../src/core/control/XournalMain.cpp:198
 msgid "Xournal++ crashed last time. Would you like to restore the last edited file?"
 msgstr "El Xournal++ es va tancar de sobte l'última vegada que es va executar. Voleu restaurar l'últim fitxer editat?"
 
-#: ../src/core/control/XournalMain.cpp:233
+#: ../src/core/control/XournalMain.cpp:202
 msgid "Recovery file detected"
 msgstr "S'ha detectat un fitxer de recuperació."
 
-#: ../src/core/control/XournalMain.cpp:234
+#: ../src/core/control/XournalMain.cpp:203
 msgid "Delete file"
 msgstr "Esborra el fitxer"
 
-#: ../src/core/control/XournalMain.cpp:234
+#: ../src/core/control/XournalMain.cpp:203
 msgid "Restore file"
 msgstr "Restaura el fitxer"
 
-#: ../src/core/control/XournalMain.cpp:254
+#: ../src/core/control/XournalMain.cpp:223
 msgid "The background file \"{1}\" could not be found. It might have been moved, renamed or deleted."
 msgstr "El fitxer de fons «{1}» no s'ha trobat. Potser s'ha mogut, se li ha canviat el nom o s'ha esborrat."
 
-#: ../src/core/control/XournalMain.cpp:446
+#: ../src/core/control/XournalMain.cpp:415
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -351,24 +368,24 @@ msgstr "<span foreground='red' size='x-large'>Falta el fitxer d'interfície grà
 "  ni a la ruta de treball,\n"
 "  ni a {2}."
 
-#: ../src/core/control/XournalMain.cpp:451
+#: ../src/core/control/XournalMain.cpp:420
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "S'intentarà executar sense aquest fitxer."
 
-#: ../src/core/control/XournalMain.cpp:468
-#: ../src/core/control/XournalMain.cpp:528
+#: ../src/core/control/XournalMain.cpp:437
+#: ../src/core/control/XournalMain.cpp:497
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "El Xournal++ només pot tenir un fitxer obert.\n"
 "Els altres s'ignoraran."
 
-#: ../src/core/control/XournalMain.cpp:479
+#: ../src/core/control/XournalMain.cpp:448
 msgid "File {1} does not exist."
 msgstr "El fitxer {1} no existeix."
 
-#: ../src/core/control/XournalMain.cpp:483
+#: ../src/core/control/XournalMain.cpp:452
 msgid "Filesystem error: {1}\n"
 "Sorry, Xournal++ cannot open the file: {2}\n"
 "Consider copying the file to a local directory."
@@ -376,33 +393,33 @@ msgstr "Error del sistema de fitxers: {1}\n"
 "El Xournal++ no pot obrir el fitxer: {2}\n"
 "Potser ho podrà fer si copieu el fitxer a una carpeta local."
 
-#: ../src/core/control/XournalMain.cpp:644
+#: ../src/core/control/XournalMain.cpp:642
 msgid "Jump to Page (first Page: 1)"
 msgstr "Vés a la pàgina (primera pàgina: 1)"
 
-#: ../src/core/control/XournalMain.cpp:648
+#: ../src/core/control/XournalMain.cpp:646
 msgid "Get version of xournalpp"
 msgstr "Obté la versió del xournalapp"
 
-#: ../src/core/control/XournalMain.cpp:650
+#: ../src/core/control/XournalMain.cpp:648
 msgid "Disable audio for this session"
 msgstr "Desactiva el so durant aquesta sessió"
 
-#: ../src/core/control/XournalMain.cpp:652
+#: ../src/core/control/XournalMain.cpp:650
 msgid "Open PDF in attach mode\n"
 "                                 Ignored if no PDF file is specified."
 msgstr "Obre el PDF en mode adjunt\n"
 "                                 S'ignora si no s'especifica un fitxer PDF."
 
-#: ../src/core/control/XournalMain.cpp:656
+#: ../src/core/control/XournalMain.cpp:654
 msgid "Save xopp-file with the background PDF specified as FILE"
 msgstr "Desa el fitxer xopp amb el fons PDF especificat com a FITXER"
 
-#: ../src/core/control/XournalMain.cpp:665
+#: ../src/core/control/XournalMain.cpp:663
 msgid "Export FILE as PDF"
 msgstr "Exporta el FITXER com a PDF"
 
-#: ../src/core/control/XournalMain.cpp:667
+#: ../src/core/control/XournalMain.cpp:665
 msgid "Export FILE as image files (one per page)\n"
 "                                 Guess the output format from the extension of IMGFILE\n"
 "                                 Supported formats: .png, .svg"
@@ -410,7 +427,7 @@ msgstr "Exporta el FITXER com a fitxers d'imatge (un per pàgina)\n"
 "                                 Determina el format de sortida en base a l'extensió del fitxer de la imatge.\n"
 "                                 Formats suportats: .png i .svg"
 
-#: ../src/core/control/XournalMain.cpp:672
+#: ../src/core/control/XournalMain.cpp:670
 msgid "Export without background\n"
 "                                 The exported file has transparent or white background,\n"
 "                                 depending on what its format supports\n"
@@ -418,13 +435,13 @@ msgstr "Exporta sense fons\n"
 "                                 El fitxer exportat té un fons transparent o blanc,\n"
 "                                 depenent del que suporti el seu format.\n"
 
-#: ../src/core/control/XournalMain.cpp:677
+#: ../src/core/control/XournalMain.cpp:675
 msgid "Export without ruling\n"
 "                                 The exported file has no paper ruling\n"
 msgstr "Exporta sense línies\n"
 "                                 El fitxer exportat no té les línies de quadrícula.\n"
 
-#: ../src/core/control/XournalMain.cpp:681
+#: ../src/core/control/XournalMain.cpp:679
 msgid "Export layers progressively\n"
 "                                 In PDF export, Render layers progressively one by one.\n"
 "                                 This results in N export pages per page with N layers,\n"
@@ -436,25 +453,25 @@ msgstr "Exporta les capes progresivament\n"
 "                                 augmentant progressivament la pila de capes.\n"
 "                                 El fitxer PDF resultant es pot fer servir per a presentacions.\n"
 
-#: ../src/core/control/XournalMain.cpp:688
+#: ../src/core/control/XournalMain.cpp:686
 msgid "Only export the pages specified by RANGE (e.g. \"2-3,5,7-\")\n"
 "                                 No effect without -p/--create-pdf or -i/--create-img"
 msgstr "Exporta només les pàgines especificades per l'INTERVAL (p. ex: «2-3,5,7-»)\n"
 "                                 No té efecte sense -p/--create-pdf o -i/--create-img"
 
-#: ../src/core/control/XournalMain.cpp:692
-msgid "On export, only export the layers specified by RANGE (e.g. \"2-3,5,7-\")\n"
+#: ../src/core/control/XournalMain.cpp:690
+msgid "Only export the layers specified by RANGE (e.g. \"2-3,5,7-\")\n"
 "                                 No effect without -p/--create-pdf or -i/--create-img"
-msgstr "Quan s'exporta, exporta només les capes especificades per l'INTERVAL (p. ex: «2-3,5,7-»)\n"
+msgstr "Exporta només les capes especificades per  l'INTERVAL (p. ex: «2-3,5,7-»)\n"
 "                                 No té efecte sense -p/--create-pdf o -i/--create-img"
 
-#: ../src/core/control/XournalMain.cpp:696
+#: ../src/core/control/XournalMain.cpp:694
 msgid "Set DPI for PNG exports. Default is 300\n"
 "                                 No effect without -i/--create-img=foo.png"
 msgstr "Estableix els ppp per a exportar a PNG. El valor per defecte és 300.\n"
 "                                 No té efecte sense -i/--create-img=foo.png"
 
-#: ../src/core/control/XournalMain.cpp:700
+#: ../src/core/control/XournalMain.cpp:698
 msgid "Set page width for PNG exports\n"
 "                                 No effect without -i/--create-img=foo.png\n"
 "                                 Ignored if --export-png-dpi is used"
@@ -462,7 +479,7 @@ msgstr "Estableix l'ample de pàgina per a l'exportació a PNG.\n"
 "                                 No té efecte sense -i/--create-img=foo.png\n"
 "                                 S'ignora si es fa servir --export-png-dpi"
 
-#: ../src/core/control/XournalMain.cpp:706
+#: ../src/core/control/XournalMain.cpp:704
 msgid "Set page height for PNG exports\n"
 "                                 No effect without -i/--create-img=foo.png\n"
 "                                 Ignored if --export-png-dpi or --export-png-width is used"
@@ -470,11 +487,11 @@ msgstr "Estableix l'alçària de pàgina per a l'exportació a PNG.\n"
 "                                 No té efecte sense -i/--create-img=foo.png\n"
 "                                 S'ignora si es fa servir --export-png-dpi o --export-png-width"
 
-#: ../src/core/control/XournalMain.cpp:711
+#: ../src/core/control/XournalMain.cpp:709
 msgid "Advanced export options"
 msgstr "Opcions avançades d'exportació"
 
-#: ../src/core/control/XournalMain.cpp:712
+#: ../src/core/control/XournalMain.cpp:710
 msgid "Display advanced export options"
 msgstr "Mostra les opcions d'exportació avançades"
 
@@ -633,12 +650,8 @@ msgstr "Puntejat en vista isomètrica"
 msgid "Isometric Graph"
 msgstr "Quadrícula isomètrica"
 
-#: ../src/core/control/pagetype/PageTypeHandler.cpp:40
-msgid "With PDF background"
-msgstr "Amb fons de PDF"
-
 #: ../src/core/control/pagetype/PageTypeHandler.cpp:41
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:395
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:399
 msgid "Image"
 msgstr "Imatge"
 
@@ -650,23 +663,24 @@ msgstr "%F‒Nota‒%H-%M"
 msgid "%{name}_annotated"
 msgstr "%{name}_comentat"
 
-#: ../src/core/control/tools/EditSelection.cpp:456
+#: ../src/core/control/tools/EditSelection.cpp:461
 msgid "Arrange"
 msgstr "Ordena"
 
-#: ../src/core/control/tools/EditSelection.cpp:471
+#: ../src/core/control/tools/EditSelection.cpp:476
 msgid "Bring forward"
 msgstr "Porta al davant"
 
-#: ../src/core/control/tools/EditSelection.cpp:482
+#: ../src/core/control/tools/EditSelection.cpp:487
 msgid "Send backward"
 msgstr "Envia avall"
 
-#: ../src/core/control/tools/EditSelection.cpp:489
+#: ../src/core/control/tools/EditSelection.cpp:494
 msgid "Send to back"
 msgstr "Envia al fons"
 
 #: ../src/core/control/tools/ImageHandler.cpp:41
+#: ../src/core/model/Image.cpp:165 ../src/core/model/Image.cpp:169
 msgid "Failed to load image"
 msgstr "No s'ha pogut carregar la imatge."
 
@@ -846,17 +860,17 @@ msgstr "Error al carregar el fitxer de glade «{1}» (s'intentarà carregar \"{2
 msgid "Unable to play audio recording {1}"
 msgstr "No es pot reproduir la gravació de so {1}"
 
-#: ../src/core/gui/PageView.cpp:921
+#: ../src/core/gui/PageView.cpp:922
 #: ../src/core/gui/sidebar/previews/base/SidebarPreviewBaseEntry.cpp:82
 #: ../src/core/gui/toolbarMenubar/ToolPageLayer.cpp:148
 msgid "Loading..."
 msgstr "Es carrega..."
 
-#: ../src/core/gui/PageView.cpp:978
+#: ../src/core/gui/PageView.cpp:979
 msgid "Scroll to page {1}"
 msgstr "Desplaça fins a la pàgina {1}"
 
-#: ../src/core/gui/PageView.cpp:980
+#: ../src/core/gui/PageView.cpp:981
 msgid "Add missing page"
 msgstr "Afegeix la pàgina que falta"
 
@@ -915,25 +929,25 @@ msgstr "No hi ha cap dispositiu."
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:86
 msgid "Tool - don't change"
-msgstr "Eina ‒ no canviar"
+msgstr "Eina ‒ sense canviar-ne el tipus"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:87
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:368
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:372
 msgid "Pen"
 msgstr "Llapis"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:88
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:377
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:381
 msgid "Eraser"
 msgstr "Goma d'esborrar"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:89
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:391
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:395
 msgid "Highlighter"
 msgstr "Subratllador"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:90
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:393
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:397
 msgid "Text"
 msgstr "Text"
 
@@ -963,7 +977,7 @@ msgid "Select multi layer rect"
 msgstr "Selecciona un rectangle multicapa"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:97
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:434
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:438
 msgid "Hand"
 msgstr "Mà"
 
@@ -981,7 +995,7 @@ msgstr "Selecciona una àrea de text d'un pdf"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:125
 msgid "Drawing Type - don't change"
-msgstr "Dibuix ‒ no canviar el tipus"
+msgstr "Dibuix ‒ sense canviar-ne el tipus"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:127
 msgid "Normal drawing"
@@ -989,49 +1003,48 @@ msgstr "Dibuix normal"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:129
 #: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:39
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:415
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:419
 msgid "Draw Line"
 msgstr "Dibuixa línies"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:131
 #: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:34
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:408
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:412
 msgid "Draw Rectangle"
 msgstr "Dibuixa rectangles"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:133
 #: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:35
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:409
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:413
 msgid "Draw Ellipse"
 msgstr "Dibuixa el·lipses"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:135
 #: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:36
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:410
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:414
 msgid "Draw Arrow"
 msgstr "Dibuixa fletxes"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:137
 #: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:38
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:412
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:416
 msgid "Draw Double Arrow"
 msgstr "Dibuixa fletxes dobles"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:139
-#: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:40
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:414
-msgid "Draw coordinate system"
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:418
+msgid "Draw Coordinate System"
 msgstr "Dibuixa sistemes de coordenades"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:141
-#: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:44
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:411
 #: ../src/core/undo/RecognizerUndoAction.cpp:61
-msgid "Stroke recognizer"
+msgid "Shape Recognizer"
 msgstr "Reconeixedor de traços"
 
 #: ../src/core/gui/dialog/ButtonConfigGui.cpp:143
 #: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:42
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:416
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:420
 msgid "Draw Spline"
 msgstr "Dibuixa corbes spline"
 
@@ -1053,7 +1066,7 @@ msgid "Xournal++ files"
 msgstr "Fitxers Xournal++"
 
 #: ../src/core/gui/dialog/FileChooserFiltersHelper.cpp:34
-#: ../src/core/gui/dialog/PageTemplateDialog.cpp:116
+#: ../src/core/gui/dialog/PageTemplateDialog.cpp:119
 msgid "Xournal++ template"
 msgstr "Plantilla Xournal++"
 
@@ -1061,7 +1074,8 @@ msgstr "Plantilla Xournal++"
 msgid "Image files"
 msgstr "Fitxers d'imatge"
 
-#: ../src/core/gui/dialog/FormatDialog.cpp:70
+#: ../src/core/gui/dialog/FormatDialog.cpp:50
+#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:163
 msgid "Custom"
 msgstr "Personalitzat"
 
@@ -1097,18 +1111,18 @@ msgstr "Error: {1}. Comproveu els continguts de {2}."
 msgid "Error: {1} is not a regular file. Please check your LaTeX template file settings. "
 msgstr "Error: {1} no és un fitxer regular. Comproveu la configuració del fitxer de plantilla LaTeX. "
 
-#: ../src/core/gui/dialog/PageTemplateDialog.cpp:112
+#: ../src/core/gui/dialog/PageTemplateDialog.cpp:115
 #: ../src/core/gui/dialog/XojSaveDlg.cpp:79
 msgid "Save File"
 msgstr "Desa el fitxer"
 
-#: ../src/core/gui/dialog/PageTemplateDialog.cpp:112
+#: ../src/core/gui/dialog/PageTemplateDialog.cpp:115
 #: ../src/core/gui/dialog/XojOpenDlg.cpp:80
 #: ../src/core/gui/dialog/XojSaveDlg.cpp:19
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
-#: ../src/core/gui/dialog/PageTemplateDialog.cpp:113
+#: ../src/core/gui/dialog/PageTemplateDialog.cpp:116
 msgid "_Save"
 msgstr "_Desa"
 
@@ -1211,11 +1225,11 @@ msgstr "Barres d'eines"
 
 #: ../src/core/gui/dialog/ToolbarManageDialog.cpp:87
 msgid "New"
-msgstr "Nova"
+msgstr "Nou"
 
 #: ../src/core/gui/dialog/XojOpenDlg.cpp:49
 msgid "Attach file to the journal"
-msgstr "Adjunta fitxer al quadern"
+msgstr "Adjunta el fitxer al quadern"
 
 #: ../src/core/gui/dialog/XojOpenDlg.cpp:81
 msgid "_Open"
@@ -1227,7 +1241,7 @@ msgstr "Obre fitxer de plantilla"
 
 #: ../src/core/gui/dialog/XojOpenDlg.cpp:136
 #: ../src/core/gui/dialog/XojOpenDlg.cpp:197
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:281
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:285
 msgid "Open file"
 msgstr "Obre fitxer"
 
@@ -1271,19 +1285,19 @@ msgstr "Mostra només les pàgines que no s'han fet servir (1 pàgina sense fer 
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "Mostra només les pàgines que no s'han fet servir ({1} pàgines sense fer servir)"
 
-#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:161
+#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:162
 msgid "Removed tool item {1} from Toolbar {2} ID {3}"
 msgstr "S'ha tret l'element {1} de la barra d'eines {2} ID {3}."
 
-#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:163
+#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:164
 msgid "Removed tool item from Toolbar {1} ID {2}"
 msgstr "S'ha tret l'element de la barra d'eines {1} ID {2}."
 
-#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:167
+#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:168
 msgid "Could not remove tool item {1} from Toolbar {2} on position {3}"
 msgstr "No s'ha pogut traure l'element {1} de la barra d'eines {2} a la posició {3}."
 
-#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:172
+#: ../src/core/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:173
 msgid "Could not remove tool item from Toolbar {1} on position {2}"
 msgstr "No s'ha pogut traure l'element de la barra d'eines {1} a la posició {2}."
 
@@ -1345,7 +1359,7 @@ msgid "Error loading menubar XML file (try to load \"{1}\")"
 msgstr "Error al carregar el fitxer XML de la barra de menús (s'intenta carregar «{1}»)."
 
 #: ../src/core/gui/menus/menubar/PageTypeSubmenu.cpp:47
-#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:176
+#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:369
 msgid "Apply to all pages"
 msgstr "Aplica a totes les pàgines"
 
@@ -1355,7 +1369,7 @@ msgstr "Gestor de complements"
 
 #: ../src/core/gui/menus/menubar/PluginsSubmenu.cpp:32
 msgid "Plugin"
-msgstr "Complement"
+msgstr "Complements"
 
 #: ../src/core/gui/menus/menubar/RecentDocumentsSubmenu.cpp:61
 msgctxt "The selected document will be removed from the recent files list"
@@ -1385,11 +1399,15 @@ msgctxt "This opens a submenu of the recent files list, and clicking on individu
 msgid "Dismiss a single document"
 msgstr "Descarta un sol document"
 
-#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:138
+#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:165
+msgid "Copy current page"
+msgstr "Copia el de la pàgina actual"
+
+#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:249
 msgid "Copy current background"
 msgstr "Copia el fons actual"
 
-#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:156
+#: ../src/core/gui/menus/popoverMenus/PageTypeSelectionPopover.cpp:303
 msgid "Apply to current page"
 msgstr "Aplica a la pàgina actual"
 
@@ -1403,15 +1421,23 @@ msgstr "Previsualització de la pila de capes"
 
 #: ../src/core/gui/sidebar/previews/layer/SidebarPreviewLayers.cpp:37
 msgid "Layer Preview"
-msgstr "Previsualització de la capa"
+msgstr "Previsualització de capes"
 
 #: ../src/core/gui/sidebar/previews/page/SidebarPreviewPages.cpp:36
 msgid "Page Preview"
-msgstr "Previsualització de pàgina"
+msgstr "Previsualització de pàgines"
+
+#: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:40
+msgid "Draw coordinate system"
+msgstr "Dibuixa sistemes de coordenades"
+
+#: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:44
+msgid "Stroke recognizer"
+msgstr "Reconeixedor de traços"
 
 #: ../src/core/gui/toolbarMenubar/DrawingTypeComboToolButton.cpp:58
 msgid "Drawing Type Combo"
-msgstr "Caixa de tria de tipus de dibuix"
+msgstr "Menú desplegable de dibuix"
 
 #: ../src/core/gui/toolbarMenubar/FontButton.cpp:74
 msgid "Font"
@@ -1429,272 +1455,268 @@ msgid "Could not parse custom toolbar.ini file: {1}\n"
 msgstr "No s'ha pogut processar el fitxer «toolbar.ini» personalitzat: {1}\n"
 "Les barres d'eines no estaran disponibles"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:280
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:284
 msgid "New Xournal"
 msgstr "Xournal nou"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:283
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:287
 msgid "Export as PDF"
 msgstr "Exporta a PDF"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:284
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:288
 msgid "Print"
 msgstr "Imprimeix"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:293
-#: ../src/core/undo/UndoRedoHandler.cpp:177
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:297
+#: ../src/core/undo/UndoRedoHandler.cpp:179
 msgid "Undo"
 msgstr "Desfés"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:296
-#: ../src/core/undo/UndoRedoHandler.cpp:189
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:300
+#: ../src/core/undo/UndoRedoHandler.cpp:191
 msgid "Redo"
 msgstr "Torna a fer"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:299
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:303
 msgid "Cut"
 msgstr "Retalla"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:300
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:304
 msgid "Copy"
 msgstr "Copia"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:301
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:305
 #: ../src/core/undo/AddUndoAction.cpp:72
 msgid "Paste"
 msgstr "Enganxa"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:303
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:307
 msgid "Search"
 msgstr "Cerca"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:305
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:309
 #: ../src/core/undo/DeleteUndoAction.cpp:74
 msgid "Delete"
 msgstr "Elimina"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:308
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:312
 msgid "Rotation Snapping"
 msgstr "Ajust de rotació"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:309
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:313
 msgid "Grid Snapping"
 msgstr "Ajusta a la graella"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:317
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:321
 msgid "Paired pages"
 msgstr "Pàgines emparellades"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:319
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:323
 msgid "Presentation mode"
 msgstr "Mode de presentació"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:320
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:324
 msgid "Toggle fullscreen"
 msgstr "Commuta la pantalla completa"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:322
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:326
 msgid "Manage Toolbars"
 msgstr "Gestiona les barres d'eines"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:324
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:328
 msgid "Customize Toolbars"
 msgstr "Personalitza les barres d'eines"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:326
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:330
 msgid "Zoom out"
 msgstr "Allunya"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:327
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:331
 msgid "Zoom in"
 msgstr "Apropa"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:328
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:332
 msgid "Zoom fit to screen"
 msgstr "Ajusta a la pantalla"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:329
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:333
 msgid "Zoom to 100%"
 msgstr "Ajusta al 100 %"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:336
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:340
 msgid "Go to first page"
 msgstr "Vés a la primera pàgina"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:337
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:446
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:341
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:450
 msgid "Back"
 msgstr "Anterior"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:338
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:342
 msgid "Go to page"
 msgstr "Vés a la pàgina"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:339
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:343
 msgid "Next"
 msgstr "Següent"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:340
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:344
 msgid "Go to last page"
 msgstr "Vés a l'última pàgina"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:343
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:347
 msgid "Go to previous layer"
 msgstr "Vés a la capa anterior"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:344
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:348
 msgid "Go to next layer"
 msgstr "Vés a la capa següent"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:345
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:349
 msgid "Go to top layer"
 msgstr "Vés a la capa superior"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:348
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:352
 msgid "Next annotated page"
 msgstr "Pàgina anotada següent"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:354
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:358
 msgid "Insert page"
 msgstr "Afegeix una pàgina"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:356
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:360
 msgid "Delete current page"
 msgstr "Elimina la pàgina actual"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:364
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:373
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:381
-msgid "standard"
-msgstr "estàndard"
-
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:365
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:383
-msgid "dashed"
-msgstr "discontínua"
-
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:366
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:368
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:377
 #: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:385
-msgid "dash-/ dotted"
-msgstr "discontínua/puntejada"
+msgid "standard"
+msgstr "Estàndard"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:367
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:369
 #: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:387
+msgid "dashed"
+msgstr "Discontínua"
+
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:370
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:389
+msgid "dash-/ dotted"
+msgstr "Discontínua/puntejada"
+
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:371
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:391
 msgid "dotted"
-msgstr "puntejada"
+msgstr "Puntejada"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:374
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:378
 msgid "whiteout"
-msgstr "pinta (com si fos líquid corrector)"
+msgstr "Pinta (com si fos líquid corrector)"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:375
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:379
 msgid "delete stroke"
-msgstr "esborra traços sencers"
+msgstr "Esborra traços sencers"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:394
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:398
 msgid "Add/Edit TeX"
 msgstr "Afegeix/Edita TeX"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:396
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:400
 msgid "Default Tool"
 msgstr "Eina predeterminada"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:398
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:402
 #: ../src/core/gui/toolbarMenubar/ToolPdfCombocontrol.cpp:14
 msgid "Select Linear PDF Text"
 msgstr "Selecciona text PDF en línia"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:400
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:404
 msgid "Select PDF Text in Rectangle"
 msgstr "Selecciona text PDF en àrea rectangular"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:402
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:406
 msgid "Setsquare"
 msgstr "Transportador cartabó"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:403
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:407
 msgid "Compass"
 msgstr "Transportador rodó"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:407
-msgid "Shape Recognizer"
-msgstr "Reconeixedor de traços"
-
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:419
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:423
 #: ../src/core/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:13
 msgid "Select Region"
 msgstr "Selecciona una regió"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:421
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:425
 #: ../src/core/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:12
 msgid "Select Rectangle"
 msgstr "Selecciona una àrea rectangular"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:424
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:428
 #: ../src/core/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:16
 msgid "Select Multi-Layer Region"
 msgstr "Selecciona una regió multicapa"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:427
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:431
 #: ../src/core/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:14
 msgid "Select Multi-Layer Rectangle"
 msgstr "Selecciona una àrea rectangular multicapa"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:429
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:433
 #: ../src/core/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:18
 msgid "Select Object"
 msgstr "Selecciona un objecte"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:431
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:435
 msgid "Vertical Space"
 msgstr "Espai vertical"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:433
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:437
 #: ../src/core/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:19
 msgid "Play Object"
-msgstr "Reprodueix objecte"
+msgstr "Reprodueix un objecte"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:439
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:443
 msgid "Record Audio / Stop Recording"
 msgstr "Enregistra àudio/Atura l'enregistrament"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:441
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:445
 msgid "Pause / Play"
 msgstr "Reprodueix/Posa en pausa"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:442
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:446
 msgid "Stop"
 msgstr "Para"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:444
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:448
 msgid "Forward"
-msgstr "Endavant"
+msgstr "Següent"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:479
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:483
 msgid "Fill"
 msgstr "Omple"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:480
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:484
 msgid "Fill Opacity"
 msgstr "Opacitat del farciment"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:483
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:487
 msgid "Very Fine"
 msgstr "Molt fi"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:484
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:488
 msgid "Fine"
 msgstr "Fi"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:486
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:490
 msgid "Medium"
-msgstr "Mitjà"
+msgstr "Normal"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:487
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:491
 msgid "Thick"
 msgstr "Gruixut"
 
-#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:489
+#: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:493
 msgid "Very Thick"
 msgstr "Molt gruixut"
 
@@ -1708,7 +1730,7 @@ msgstr "Amaga-ho tot"
 
 #: ../src/core/gui/toolbarMenubar/ToolPageLayer.cpp:178
 msgid "Create new layer"
-msgstr "Crea capa nova"
+msgstr "Afegeix una capa més"
 
 #: ../src/core/gui/toolbarMenubar/ToolPageLayer.cpp:205
 msgid "Layer"
@@ -1716,7 +1738,7 @@ msgstr "Capa"
 
 #: ../src/core/gui/toolbarMenubar/ToolPageLayer.cpp:302
 msgid "Layer Combo"
-msgstr "Caixa de capes"
+msgstr "Menú desplegable de capes"
 
 #: ../src/core/gui/toolbarMenubar/ToolPageSpinner.cpp:26
 msgid "Page"
@@ -1729,7 +1751,7 @@ msgstr " de {1}"
 
 #: ../src/core/gui/toolbarMenubar/ToolPageSpinner.cpp:85
 msgid "PDF Page {1}"
-msgstr "Pàgina de PDF {1}"
+msgstr "Pàgina {1} de PDF"
 
 #: ../src/core/gui/toolbarMenubar/ToolPageSpinner.cpp:87
 msgid "PDF {1}"
@@ -1815,10 +1837,22 @@ msgctxt "as a noun: a copy of"
 msgid "Copy"
 msgstr "Copia"
 
-#: ../src/core/model/Document.cpp:326 ../src/core/model/Document.cpp:335
-#: ../src/core/model/Document.cpp:338
+#: ../src/core/model/Document.cpp:330 ../src/core/model/Document.cpp:339
+#: ../src/core/model/Document.cpp:342
 msgid "Document not loaded! ({1}), {2}"
 msgstr "El document no s'ha carregat! ({1}), {2}"
+
+#: ../src/core/model/Image.cpp:165 ../src/core/model/Image.cpp:175
+msgid "Error: "
+msgstr "Error: "
+
+#: ../src/core/model/Image.cpp:169 ../src/core/model/Image.cpp:179
+msgid "Unrecoverable error"
+msgstr "Error sense recuperació possible"
+
+#: ../src/core/model/Image.cpp:175 ../src/core/model/Image.cpp:179
+msgid "Failed to close image stream"
+msgstr "No s'ha pogut tancar el flux de la imatge."
 
 #: ../src/core/model/XojPage.cpp:170
 msgid "Background"
@@ -1941,9 +1975,13 @@ msgstr "Mou"
 msgid "Page background changed"
 msgstr "El fons de la pàgina s'ha canviat."
 
+#: ../src/core/undo/PageSizeChangeUndoAction.cpp:41
+msgid "Page size changed"
+msgstr "La mida del full ha canviat."
+
 #: ../src/core/undo/RemoveLayerUndoAction.cpp:27
 msgid "Delete layer"
-msgstr "Elimina una capa"
+msgstr "Elimina la capa"
 
 #: ../src/core/undo/RotateUndoAction.cpp:58
 msgid "Rotation"
@@ -1969,23 +2007,23 @@ msgstr "Mou la pàgina avall"
 msgid "Edit text"
 msgstr "Edita text"
 
-#: ../src/core/undo/UndoRedoHandler.cpp:112
+#: ../src/core/undo/UndoRedoHandler.cpp:114
 msgid "Could not undo \"{1}\"\n"
 "Something went wrong… Please write a bug report…"
 msgstr "«{1}» no s'ha pogut desfer.\n"
 "Alguna cosa ha anat malament... Envieu un informe d'error…"
 
-#: ../src/core/undo/UndoRedoHandler.cpp:138
+#: ../src/core/undo/UndoRedoHandler.cpp:140
 msgid "Could not redo \"{1}\"\n"
 "Something went wrong… Please write a bug report…"
 msgstr "«{1}» no s'ha pogut tornar a fer.\n"
 "Alguna cosa ha anat malament... Envieu un informe d'error…"
 
-#: ../src/core/undo/UndoRedoHandler.cpp:172
+#: ../src/core/undo/UndoRedoHandler.cpp:174
 msgid "Undo: "
 msgstr "Desfés: "
 
-#: ../src/core/undo/UndoRedoHandler.cpp:184
+#: ../src/core/undo/UndoRedoHandler.cpp:186
 msgid "Redo: "
 msgstr "Torna a fer: "
 
@@ -2031,11 +2069,11 @@ msgid "File couldn't be opened. You have to do it manually:\n"
 msgstr "El fitxer no s'ha pogut obrir. Caldrà que ho feu manualment:\n"
 "URL: {1}"
 
-#: ../src/util/PathUtil.cpp:249
+#: ../src/util/PathUtil.cpp:286
 msgid "xournalpp-{1}"
 msgstr "xournalpp-{1}"
 
-#: ../src/util/PathUtil.cpp:259
+#: ../src/util/PathUtil.cpp:296
 msgid "Could not create folder: {1}\n"
 "Failed with error: {2}"
 msgstr "No s'ha pogut crear la carpeta: {1}\n"
@@ -2097,7 +2135,7 @@ msgstr "Quant al Xournal++"
 msgid "<span size=\"xx-large\" weight=\"bold\">Xournal++</span>\n"
 "<i>The next generation</i>"
 msgstr "<span size=\"xx-large\" weight=\"bold\">Xournal++</span>\n"
-"<i>La propera generació</i>"
+"La propera generació"
 
 #: ../ui/about.glade:133
 msgid "Icon Designers"
@@ -2106,7 +2144,7 @@ msgstr "Dissenyadors de les icones"
 #: ../ui/about.glade:186
 msgid "Partially based on Xournal\n"
 "by Denis Auroux"
-msgstr "Basat parcialment amb el Xournal\n"
+msgstr "Basat en part en el Xournal\n"
 "de Denis Auroux"
 
 #: ../ui/about.glade:218
@@ -2136,8 +2174,8 @@ msgstr "Tanca"
 
 #: ../ui/backgroundSelection.glade:49 ../ui/exportSettings.glade:425
 #: ../ui/goto.glade:108 ../ui/pageFormat.glade:346 ../ui/pageTemplate.glade:278
-#: ../ui/plugin.glade:113 ../ui/renameLayerDialog.glade:71
-#: ../ui/selectOpacity.glade:134 ../ui/settings.glade:6288
+#: ../ui/plugin.glade:114 ../ui/renameLayerDialog.glade:71
+#: ../ui/selectOpacity.glade:134 ../ui/settings.glade:6405
 #: ../ui/texdialog.glade:203
 msgid "Ok"
 msgstr "D'acord"
@@ -2155,7 +2193,7 @@ msgid "Height"
 msgstr "Alçària"
 
 #: ../ui/exportSettings.glade:53 ../ui/settings.glade:254
-#: ../ui/settings.glade:271 ../ui/settings.glade:3637
+#: ../ui/settings.glade:271 ../ui/settings.glade:3755
 msgid "None"
 msgstr "Cap"
 
@@ -2244,7 +2282,7 @@ msgstr "Camí del fitxer de plantilla global"
 
 #: ../ui/latexSettings.glade:119
 msgid "The following strings will be substituted in the global template file when running the LaTeX tool:"
-msgstr "Les cadenes següents es substituiran al fitxer de plantilla global quan s'executi l'eina LaTeX:"
+msgstr "Les cadenes següents se substituiran al fitxer de plantilla global quan s'executi l'eina LaTeX:"
 
 #: ../ui/latexSettings.glade:133
 msgid "%%XPP_TOOL_INPUT%%"
@@ -2304,7 +2342,7 @@ msgstr "Ajusta el text"
 
 #: ../ui/latexSettings.glade:434
 msgid "Use font from system theme."
-msgstr "Fes servir el tipus de lletra del tema del sistema."
+msgstr "Fes servir el tipus de lletra del tema del sistema"
 
 #: ../ui/latexSettings.glade:454
 msgid "Font: "
@@ -2440,23 +2478,23 @@ msgstr "Paletes de colors"
 msgid "Plugins"
 msgstr "Complements"
 
-#: ../ui/plugin.glade:80
+#: ../ui/plugin.glade:81
 msgid "Plugin changes are only applied after Xournal++ is restarted"
 msgstr "Els canvis dels complements s'apliquen quan es reiniciï el Xournal++."
 
-#: ../ui/pluginEntry.glade:50
+#: ../ui/pluginEntry.glade:51
 msgid "Author: "
 msgstr "Autor: "
 
-#: ../ui/pluginEntry.glade:87
+#: ../ui/pluginEntry.glade:88
 msgid "Path: "
 msgstr "Camí: "
 
-#: ../ui/pluginEntry.glade:123
+#: ../ui/pluginEntry.glade:124
 msgid "Version: "
 msgstr "Versió: "
 
-#: ../ui/pluginEntry.glade:158
+#: ../ui/pluginEntry.glade:159
 msgid "enabled,"
 msgstr "activat,"
 
@@ -2564,15 +2602,15 @@ msgstr "%a\t\tDia de la setmana abreujat (com ara Thu)\n"
 "%U\t\tNúmero de setmana amb el primer diumenge com a primer dia de la setmana 1 (00-53)\n"
 "%W\t\tNúmero de setmana amb el primer dilluns com a primer dia de la setmana 1 (00-53)\n"
 "%w\t\tNúmero del dia de la setmana on el diumenge és el dia 0 (0-6)\n"
-"%x\t\tRepresentació de la data (e.g. 08/23/01)\n"
-"%X\t\tRepresentació de l'hora (e.g. 14:55:02)\n"
+"%x\t\tRepresentació de la data (com ara 08/23/01)\n"
+"%X\t\tRepresentació de l'hora (com ara 14:55:02)\n"
 "%y\t\tÚltims dos dígits de l'any (00-99)\n"
 "%Y\t\tAny (com ara 2001)\n"
 "%Z\t\tNom de la zona horària o abreviació (com ara CDT)\n"
 "%%\t\t%\n"
 "Els caràcters no vàlids es reemplaçaran amb «_»."
 
-#: ../ui/settings.glade:588 ../ui/settings.glade:757
+#: ../ui/settings.glade:588 ../ui/settings.glade:758
 msgid "Available Placeholders"
 msgstr "Paràmetres disponibles"
 
@@ -2585,7 +2623,8 @@ msgid "<i>This name will be proposed if you export a document to PDF.</i>"
 msgstr "<i>Aquest serà el nom proposat quan s'exporta un document a PDF.</i>"
 
 #: ../ui/settings.glade:709
-msgid "%{name}\tThe name of the exported document\n"
+msgid "%{name}\tThe filename (if any) of the PDF background\n"
+"%{file}\t\tThe saved filename of the file\n"
 "%a\t\t\tAbbreviated weekday name (e.g. Thu)\n"
 "%A\t\t\tFull weekday name (e.g. Thursday)\n"
 "%b\t\t\tAbbreviated month name (e.g. Aug)\n"
@@ -2610,7 +2649,7 @@ msgid "%{name}\tThe name of the exported document\n"
 "%Z\t\t\tTimezone name or abbreviation (e.g. CDT)\n"
 "%%\t\t\t%\n"
 "Illegal characters are replaced with \"_\""
-msgstr "%{name}\tEl nom del document exportat\n"
+msgstr "%{name}\tEl nom del document de fons (si n'hi ha algun)\n"
 "%a\t\t\tNom abreviat del dia de la setmana (com ara Thu)\n"
 "%A\t\t\tNom del dia de la setmana sencer (com ara Thursday)\n"
 "%b\t\t\tNom abreviat del mes (com ara Aug)\n"
@@ -2636,47 +2675,47 @@ msgstr "%{name}\tEl nom del document exportat\n"
 "%%\t\t\t%\n"
 "Els caràcters no vàlids es reemplaçaran amb «_»."
 
-#: ../ui/settings.glade:781
+#: ../ui/settings.glade:782
 msgid "Default Pdf export name"
 msgstr "Nom d'exportació de PDF per defecte"
 
-#: ../ui/settings.glade:806
+#: ../ui/settings.glade:807
 msgid "Enable Autoloading of Journals"
 msgstr "Activa la càrrega automàtica de quaderns"
 
-#: ../ui/settings.glade:811
+#: ../ui/settings.glade:812
 msgid "If you open a PDF and there is a Xournal file with the same name it will open the xoj file."
 msgstr "Si obriu un PDF i hi ha un fitxer Xournal amb el mateix nom, s'obrirà el fitxer .xoj."
 
-#: ../ui/settings.glade:822
+#: ../ui/settings.glade:823
 msgid "Enable autoloading of most recent file on application startup"
 msgstr "Activa la càrrega automàtica del fitxer més recent quan s'inicia l'aplicació"
 
-#: ../ui/settings.glade:827
+#: ../ui/settings.glade:828
 msgid "If enabled Xournal++ will open the most recent document automatically that you can continue editing your last saved document."
 msgstr "Si s'activa, el Xournal++ obrirà el document que s'hagi desat més recentment de manera automàtica i el podreu continuar editant."
 
-#: ../ui/settings.glade:842
+#: ../ui/settings.glade:843
 msgid "Autoloading"
 msgstr "Càrrega automàtica"
 
-#: ../ui/settings.glade:870
+#: ../ui/settings.glade:871
 msgid "Load / Save"
 msgstr "Carrega/Desa"
 
-#: ../ui/settings.glade:916
+#: ../ui/settings.glade:917
 msgid "<i>Assign device classes to each input device of your system. Only change these values if your devices are not correctly matched. (e.g. your pen shows up as touchscreen)</i>"
 msgstr "<i>Assigna classes de dispositius a cada dispositiu d'entrada del sistema. Canvieu només aquests valors si els dispositius no funcionen correctament (com ara si el llapis apareix com a pantalla tàctil).</i>"
 
-#: ../ui/settings.glade:950
+#: ../ui/settings.glade:951
 msgid "Input Devices"
 msgstr "Dispositius d’entrada"
 
-#: ../ui/settings.glade:984
+#: ../ui/settings.glade:985
 msgid "Enable drawing outside of window <i>(Drawing will not stop at the border of the window)</i>"
 msgstr "Permet dibuixar fora de la finestra <i>(No es pararà de dibuixar quan s'arribi a la vora de la finestra)</i>"
 
-#: ../ui/settings.glade:1002
+#: ../ui/settings.glade:1003
 msgid "Drag LEFT from start point acts like shift key is being held.\n"
 "\t    Drag UP acts as if Control key is being held.\n\n"
 "            Determination Radius: Radius at which modifiers will lock in until finished drawing.\n\n"
@@ -2686,725 +2725,757 @@ msgstr "Arrossegar a l'ESQUERRA des del punt inicial actua com si es premés la 
 "            Radi de determinació: Radi en el qual els modificadors estaran blocats fins que s'acabi de dibuixar.\n\n"
 "\t    <i>Útil si es vol operar sense teclat.</i>"
 
-#: ../ui/settings.glade:1013
+#: ../ui/settings.glade:1014
 msgid "Merge button events with stylus tip events\n"
 "\t    <i>(Check this if</i> \"<tt>xsetwacom get *deviceId* TabletPCButton</tt>\" <i>returns</i> \"<tt>on</tt>\"<i>)</i>"
 msgstr "Combina els esdeveniments de botons amb els de punta de llapis\n"
 "\t    <i>(Comproveu això si</i> «<tt>xsetwacom get *deviceId* TabletPCButton</tt>» <i>torna</i> \"<tt>on</tt>\"<i>)</i>"
 
-#: ../ui/settings.glade:1032
+#: ../ui/settings.glade:1033
 msgid "Slower strokes are assigned a greater pressure than faster strokes, if pressure information is absent.\n\n"
 "<i>This feature may be useful for devices that lack pressure sensitivity. For example, a mouse or touchscreen.</i>"
 msgstr "Als traços lents se'ls assigna una pressió més elevada que als traços ràpids si no hi ha informació sobre la pressió.\n\n"
 "<i>Aquesta funció pot ser útil per a dispositius que no tinguin sensibilitat de pressió. Per exemple, amb ratolins o pantalles tàctils.</i>"
 
-#: ../ui/settings.glade:1040
+#: ../ui/settings.glade:1041
 msgid "Enable Pressure Inference <i>(Guess pressure from drawing speed when device-supplied pressure is not available)</i>"
-msgstr "Activa la inferència de pressió <i>(Estima la pressió segons la velocitat de dibuix quan el dispositiu no pot aportar dades de la pressió.)</i>"
+msgstr "Activa la inferència de pressió <i>(Estima la pressió segons la velocitat de dibuix quan el dispositiu no pot aportar-ne dades.)</i>"
 
-#: ../ui/settings.glade:1058
+#: ../ui/settings.glade:1059
 msgid "Options"
 msgstr "Opcions"
 
-#: ../ui/settings.glade:1088
+#: ../ui/settings.glade:1089
 msgid "Averaging method"
 msgstr "Mètode d'aproximació"
 
-#: ../ui/settings.glade:1121
+#: ../ui/settings.glade:1122
 msgid "<i>Pick an input stabilization algorithm and its parameters</i>"
 msgstr "<i>Trieu un algoritme d'estabilització d'entrada i els seus paràmetres.</i>"
 
-#: ../ui/settings.glade:1137
+#: ../ui/settings.glade:1138
 msgid "Buffersize"
 msgstr "Mida del búfer"
 
-#: ../ui/settings.glade:1149
+#: ../ui/settings.glade:1150
 msgid "20"
 msgstr "20"
 
-#: ../ui/settings.glade:1166
+#: ../ui/settings.glade:1167
 msgid "Deadzone radius"
 msgstr "Radi de la zona morta"
 
-#: ../ui/settings.glade:1178
+#: ../ui/settings.glade:1179
 msgid "1,30"
 msgstr "1,30"
 
-#: ../ui/settings.glade:1196 ../ui/settings.glade:1208
+#: ../ui/settings.glade:1197 ../ui/settings.glade:1209
+msgctxt "Drag = Noun: force opposing the movement"
 msgid "Drag: If the value is too small, unwanted oscillations may appear. If the value is too high, there will be no stabilization."
-msgstr "Arrossega: Si el valor és molt petit, poden aparèixer oscil·lacions estranyes. Si el valor és massa alt, no hi haurà cap tipus d'estabilització."
+msgstr "Resistència: Si el valor és molt petit, poden aparèixer oscil·lacions estranyes. Si el valor és massa alt, no hi haurà cap mena d'estabilització."
 
-#: ../ui/settings.glade:1197
+#: ../ui/settings.glade:1198
+msgctxt "Noun: force opposing the movement"
 msgid "Drag"
-msgstr "Arrossega"
+msgstr "Resistència"
 
-#: ../ui/settings.glade:1210
+#: ../ui/settings.glade:1211
 msgid "0,4"
 msgstr "0,4"
 
-#: ../ui/settings.glade:1228 ../ui/settings.glade:1240
+#: ../ui/settings.glade:1229 ../ui/settings.glade:1241
+msgctxt "Mass = Noun: physics term, related to weight"
 msgid "Mass: the higher the mass, the more inertia and the more stabilization"
 msgstr "Massa: quant més alta sigui, més inèrcia i més estabilització."
 
-#: ../ui/settings.glade:1229
+#: ../ui/settings.glade:1230
+msgctxt "Noun: physics term, related to weight"
 msgid "Mass"
 msgstr "Massa"
 
-#: ../ui/settings.glade:1242
+#: ../ui/settings.glade:1243
 msgid "5"
 msgstr "5"
 
-#: ../ui/settings.glade:1260 ../ui/settings.glade:1280
+#: ../ui/settings.glade:1261 ../ui/settings.glade:1281
 msgid "Gaussian parameter: the higher, the more stabilization and the more lag between your cursor and the painting tip."
 msgstr "Paràmetre gaussià: com més alt sigui, més estabilització i més retard entre el cursor i el cursor/punta de llapis."
 
-#: ../ui/settings.glade:1262
+#: ../ui/settings.glade:1263
 msgid "0,50"
 msgstr "0,50"
 
-#: ../ui/settings.glade:1294
+#: ../ui/settings.glade:1295
 msgid "Preprocessor"
 msgstr "Preprocessador"
 
-#: ../ui/settings.glade:1325
+#: ../ui/settings.glade:1326
 msgid "Cusp detection"
 msgstr "Detecció del llindar"
 
-#: ../ui/settings.glade:1342
+#: ../ui/settings.glade:1343
 msgid "Finalize the stroke"
 msgstr "Acaba el traç"
 
-#: ../ui/settings.glade:1347
+#: ../ui/settings.glade:1348
 msgid "Input stabilization can create a gap at the end of your stroke. If enabled, this gap is filled."
 msgstr "L'estabilització de l'entrada pot crear un espai buit al final del traç. Si s'activa, aquest buit s'omple."
 
-#: ../ui/settings.glade:1365
+#: ../ui/settings.glade:1366
 msgid "Input stabilization"
 msgstr "Estabilització de l'entrada"
 
-#: ../ui/settings.glade:1396
+#: ../ui/settings.glade:1397
 msgid "Indent using spaces"
 msgstr "Indenta fent servir espais"
 
-#: ../ui/settings.glade:1418
+#: ../ui/settings.glade:1419
 msgid "Number of Spaces : "
 msgstr "Nombre d'espais: "
 
-#: ../ui/settings.glade:1430
+#: ../ui/settings.glade:1431
 msgid "Number of spaces inserted with tab."
 msgstr "Nombre d'espais que s'insereixen amb cada tabulador."
 
-#: ../ui/settings.glade:1432
+#: ../ui/settings.glade:1433
 msgid "4"
 msgstr "4"
 
-#: ../ui/settings.glade:1460
+#: ../ui/settings.glade:1461
 msgid "Tab"
 msgstr "Tabulador"
 
-#: ../ui/settings.glade:1491
+#: ../ui/settings.glade:1492
 msgid "Input System"
 msgstr "Sistema d'entrada"
 
-#: ../ui/settings.glade:1536
+#: ../ui/settings.glade:1537
 msgid "<i>Define which tools will be selected if you press a mouse button. After you release the button the previously selected tool will be selected.</i>"
-msgstr "<i>Defineix quines eines es seleccionaran si premeu un botó de ratolí. Després de soltar el botó, es tornarà a seleccionar l'eina anterior.</i>"
+msgstr "<i>Defineix quines eines se seleccionaran si premeu un botó de ratolí. Quan se solti el botó, es tornarà a seleccionar l'eina anterior.</i>"
 
-#: ../ui/settings.glade:1570
+#: ../ui/settings.glade:1571
 msgid "Middle Mouse Button"
 msgstr "Botó del mig del ratolí"
 
-#: ../ui/settings.glade:1602
+#: ../ui/settings.glade:1603
 msgid "Right Mouse Button"
 msgstr "Botó dret del ratolí"
 
-#: ../ui/settings.glade:1618
+#: ../ui/settings.glade:1619
 msgid "Mouse Buttons"
 msgstr "Botons del ratolí"
 
-#: ../ui/settings.glade:1649 ../ui/settingsDeviceClassConfig.glade:35
+#: ../ui/settings.glade:1650 ../ui/settingsDeviceClassConfig.glade:35
 msgid "Mouse"
 msgstr "Ratolí"
 
-#: ../ui/settings.glade:1696
+#: ../ui/settings.glade:1697
 msgid "<i>Pressure Sensitivity allows you to draw lines with different widths, depending on how much pressure you apply to the pen. If your tablet does not support this feature this setting has no effect.</i>"
 msgstr "<i>La sensibilitat a la pressió permet dibuixar línies amb diferents amplades, en funció de la pressió que apliqueu al llapis. Si la tauleta no indica les pressions, aquesta opció no té efecte.</i>"
 
-#: ../ui/settings.glade:1710
+#: ../ui/settings.glade:1711
 msgid "Enable Pressure Sensitivity"
 msgstr "Activa la sensibilitat a la pressió"
 
-#: ../ui/settings.glade:1740
+#: ../ui/settings.glade:1741
 msgid "<i>Some devices report unexpectedly small or large pressures. This can be fixed by setting a minimum pressure or scaling the pressure reported by the device.</i>"
 msgstr "<i>Alguns dispositius informen de pressions molt grans o molt petits de manera sobtada. Això es pot solucionar si s'estableix una pressió mínima o s'escala la pressió que indica el dispositiu.</i>"
 
-#: ../ui/settings.glade:1762
+#: ../ui/settings.glade:1763
 msgid "Minimum Pressure:"
 msgstr "Pressió mínima:"
 
-#: ../ui/settings.glade:1773
+#: ../ui/settings.glade:1774
 msgid "Pressure Multiplier: "
 msgstr "Multiplicador per a la pressió: "
 
-#: ../ui/settings.glade:1832
+#: ../ui/settings.glade:1833
 msgid "Sensitivity Scale"
 msgstr "Escala de sensibilitat"
 
-#: ../ui/settings.glade:1848
+#: ../ui/settings.glade:1849
 msgid "Pressure Sensitivity"
 msgstr "Sensibilitat a la pressió"
 
-#: ../ui/settings.glade:1872
+#: ../ui/settings.glade:1873
 msgid "<i>With some setup, pen strokes have artifacts at their beginning. This can be avoided by ignoring the first few events/stroke-points when the pen touches the screen.</i>"
 msgstr "<i>Amb algunes configuracions, els traços de llapis tenen artefactes al principi. Això es pot evitar si s'ignora els primers esdeveniments/punts de traç quan el llapis toca la pantalla.</i>"
 
-#: ../ui/settings.glade:1890
+#: ../ui/settings.glade:1891
 msgid "Ignore the first"
-msgstr "Ignora el primer"
+msgstr "Ignora els primers"
 
-#: ../ui/settings.glade:1908
+#: ../ui/settings.glade:1909
 msgid "1"
 msgstr "1"
 
-#: ../ui/settings.glade:1924
+#: ../ui/settings.glade:1925
 msgid "events"
 msgstr "esdeveniments"
 
-#: ../ui/settings.glade:1945
+#: ../ui/settings.glade:1946
 msgid "Artifact workaround"
 msgstr "Solució alternativa per als artefactes"
 
-#: ../ui/settings.glade:1972
+#: ../ui/settings.glade:1973
 msgid "<i>Specify the tools that will be selected if a button of the stylus is pressed or the eraser is used. After releasing the button, the previous tool will be selected.</i>"
-msgstr "<i>Especifica les eines que es seleccionaran si es pressiona el botó d'un llapis o es fa servir la goma d'esborrar. Quan es solti el botó, es tornarà a seleccionar l'eina anterior.</i>"
+msgstr "<i>Especifica les eines que se seleccionaran si es pressiona el botó d'un llapis o es fa servir la goma d'esborrar. Quan se solti el botó, es tornarà a seleccionar l'eina anterior.</i>"
 
-#: ../ui/settings.glade:2006
+#: ../ui/settings.glade:2007
 msgid "Button 1"
 msgstr "Botó 1"
 
-#: ../ui/settings.glade:2038
+#: ../ui/settings.glade:2039
 msgid "Button 2"
 msgstr "Botó 2"
 
-#: ../ui/settings.glade:2086
+#: ../ui/settings.glade:2087
 msgid "Stylus Buttons"
 msgstr "Botons del llapis"
 
-#: ../ui/settings.glade:2118
+#: ../ui/settings.glade:2119
 msgid "Stylus-based eraser is visible"
 msgstr "La goma d'esborrar del llapis és visible"
 
-#: ../ui/settings.glade:2133
+#: ../ui/settings.glade:2134
 msgctxt "eraser is never visible"
 msgid "Never"
 msgstr "Mai"
 
-#: ../ui/settings.glade:2134
+#: ../ui/settings.glade:2135
 msgctxt "eraser is always visible"
 msgid "Always"
 msgstr "Sempre"
 
-#: ../ui/settings.glade:2135
+#: ../ui/settings.glade:2136
 msgctxt "eraser is only visible when floating"
 msgid "When floating"
 msgstr "Quan flota"
 
-#: ../ui/settings.glade:2136
+#: ../ui/settings.glade:2137
 msgctxt "eraser is only visible when touching the screen"
 msgid "When touching"
 msgstr "Quan toca"
 
-#: ../ui/settings.glade:2158
+#: ../ui/settings.glade:2159
 msgid "Eraser visibility"
 msgstr "Visibilitat de la goma d'esborrar"
 
-#: ../ui/settings.glade:2189
+#: ../ui/settings.glade:2190
 msgid "Stylus"
 msgstr "Llapis"
 
-#: ../ui/settings.glade:2236
+#: ../ui/settings.glade:2237
 msgid "<i>You can configure devices, not identified by GTK as touchscreen, to behave as if they were one.</i>"
-msgstr "<i>Podeu configurar despositius no identificats pel GTK, com ara pantalles tàctils, i establir quin ha de ser el seu comportament.</i>"
+msgstr "<i>Podeu configurar dispositius no identificats pel GTK, com ara pantalles tàctils, i establir quin ha de ser el seu comportament.</i>"
 
-#: ../ui/settings.glade:2269 ../ui/settings.glade:2857
+#: ../ui/settings.glade:2270 ../ui/settings.glade:2858
 #: ../ui/settingsDeviceClassConfig.glade:39
 msgid "Touchscreen"
 msgstr "Pantalla tàctil"
 
-#: ../ui/settings.glade:2296
+#: ../ui/settings.glade:2297
 msgid "<i>If your hardware does not support hand recognition, Xournal++ can disable your touchscreen when your pen is near the screen.</i>"
 msgstr "<i>Si el vostre programari no suporta el reconeixement de mà, el Xournal++ pot desactivar la vostra pantalla tàctil quan el llapis estigui a prop de la pantalla.</i>"
 
-#: ../ui/settings.glade:2310
+#: ../ui/settings.glade:2311
 msgid "Enable internal Hand Recognition"
 msgstr "Activa el reconeixement de mà intern"
 
-#: ../ui/settings.glade:2340
+#: ../ui/settings.glade:2341
 msgid "Disabling Method"
 msgstr "Mètode de desactivació"
 
-#: ../ui/settings.glade:2351
+#: ../ui/settings.glade:2352
 msgid "Timeout"
 msgstr "Temps límit"
 
-#: ../ui/settings.glade:2365
+#: ../ui/settings.glade:2366
 msgid "Autodetect"
 msgstr "Detecta automàticament"
 
-#: ../ui/settings.glade:2394
+#: ../ui/settings.glade:2395
 msgid "s <i>(after which the touchscreen will be reactivated again)</i>"
 msgstr "s <i>(després del qual es reactivarà la pantalla tàctil)</i>"
 
-#: ../ui/settings.glade:2439
+#: ../ui/settings.glade:2440
 msgid "<i>Specify commands that are called once Hand Recognition triggers. The commands will be executed in the UI Thread, make sure they are not blocking!</i>"
 msgstr "<i>Especifica les comandes que s'executen quan s'activa el reconeixement de mà. Les comandes s'executaran al fil de la interfície: assegureu-vos que no les bloqueu!</i>"
 
-#: ../ui/settings.glade:2462
+#: ../ui/settings.glade:2463
 msgid "Enable"
 msgstr "Activa"
 
-#: ../ui/settings.glade:2473
+#: ../ui/settings.glade:2474
 msgid "Disable"
 msgstr "Desactiva"
 
-#: ../ui/settings.glade:2506 ../ui/settings.glade:2519
+#: ../ui/settings.glade:2507 ../ui/settings.glade:2520
 msgid "Test"
 msgstr "Prova"
 
-#: ../ui/settings.glade:2552
+#: ../ui/settings.glade:2553
 msgid "Custom Commands (for Method \"Custom\")"
 msgstr "Comandes personalitzades (per al mètode «Personalitzat»)"
 
-#: ../ui/settings.glade:2575
+#: ../ui/settings.glade:2576
 msgid "Hand Recognition"
 msgstr "Reconeixement de mà"
 
-#: ../ui/settings.glade:2602
+#: ../ui/settings.glade:2603
 msgid "<i>Use pinch gestures to zoom journal pages.</i>"
 msgstr "<i>Feu servir gestos de pinça per a fer zoom a les pàgines del quadern.</i>"
 
-#: ../ui/settings.glade:2616
+#: ../ui/settings.glade:2617
 msgid "Enable zoom gestures (requires restart)"
 msgstr "Activa els gestos de zoom (cal reiniciar)"
 
-#: ../ui/settings.glade:2634
+#: ../ui/settings.glade:2635
 msgid "When drawing with touch, two-finger gestures intended to pan the view can instead cause it to zoom, causing performance issues.\n"
 "This setting can make it easier to draw with touch. "
 msgstr "Quan es dibuixa amb el tàctil, els gestos de dos dits que es fan per a desplaçar la vista, poden aplicar un zoom i provocar problemes de rendiment.\n"
 "Aquesta opció pot facilitar els dibuixos amb el tàctil. "
 
-#: ../ui/settings.glade:2640
+#: ../ui/settings.glade:2641
 msgid "Start zooming after a distance "
 msgstr "Comença a fer zoom després d'una distància de "
 
-#: ../ui/settings.glade:2652
+#: ../ui/settings.glade:2653
 msgid "1.0"
 msgstr "1,0"
 
-#: ../ui/settings.glade:2667
+#: ../ui/settings.glade:2668
 msgid "% greater than the initial distance between the two touches."
 msgstr "% més gran que la distància inicial entre els dos tocs."
 
-#: ../ui/settings.glade:2705
+#: ../ui/settings.glade:2706
 msgid "Zoom Gestures"
 msgstr "Gestos de zoom"
 
-#: ../ui/settings.glade:2732
+#: ../ui/settings.glade:2733
 msgid "<i>Use the touchscreen like a multi-touch-aware pen.</i>"
 msgstr "<i>Feu servir la pantalla tàctil com un llapis multitàctil.</i>"
 
-#: ../ui/settings.glade:2746
+#: ../ui/settings.glade:2747
 msgid "Enable touch drawing"
 msgstr "Activa el dibuix tàctil"
 
-#: ../ui/settings.glade:2751
+#: ../ui/settings.glade:2752
 msgid "Use two fingers to pan/zoom and one finger to use the selected tool."
 msgstr "Feu servir dos dits per a moure o fer zoom i un dit per a fer servir l'eina seleccionada."
 
-#: ../ui/settings.glade:2766
+#: ../ui/settings.glade:2767
 msgid "Touch Drawing"
 msgstr "Dibuix tàctil"
 
-#: ../ui/settings.glade:2793
+#: ../ui/settings.glade:2794
 msgid "<i>Disabling GTK's built-in touchscreen scrolling can work around scrolling bugs on some platforms. Consider changing this setting if you experience jumps/sudden changes in scroll position when attempting to scroll with a touchscreen.</i>"
-msgstr "<i>Si es desactiva el desplaçament en pantalles tàctils inclòs al GTK pot resoldre alguns errors en algunes plataformes. Considereu canviar aquesta opció si observeu salts o canvies sobtats en la posició de desplaçament quan voleu desplaçar-vos amb una pantalla tàctil.</i>"
+msgstr "<i>Si es desactiva el desplaçament en pantalles tàctils inclòs al GTK pot resoldre alguns errors en algunes plataformes. Considereu canviar aquesta opció si observeu salts o canvis sobtats en la posició de desplaçament quan voleu desplaçar-vos amb una pantalla tàctil.</i>"
 
-#: ../ui/settings.glade:2807
+#: ../ui/settings.glade:2808
 msgid "Disable GTK's built-in inertial scroll functionality (requires restart)."
-msgstr "Desactiva la funcionalitat de desplaçament inercial inclosa al GTK (cal reiniciar)."
+msgstr "Desactiva la funcionalitat de desplaçament inercial inclosa al GTK (cal reiniciar)"
 
-#: ../ui/settings.glade:2826
+#: ../ui/settings.glade:2827
 msgid "Touch Scrolling"
 msgstr "Desplaçament tàctil"
 
-#: ../ui/settings.glade:2913
+#: ../ui/settings.glade:2914
 msgid "Show Menubar on Startup"
 msgstr "Mostra la barra de menús a l'inici"
 
-#: ../ui/settings.glade:2931
+#: ../ui/settings.glade:2932
 msgid "<i>Toggle visibility of menubar with F10</i>"
 msgstr "<i>Commuteu la visibilitat de la barra de menús amb F10</i>"
 
-#: ../ui/settings.glade:2949
+#: ../ui/settings.glade:2950
 msgid "Show filepath in title bar"
 msgstr "Mostra el camí del fitxer a la barra de títol"
 
-#: ../ui/settings.glade:2964
+#: ../ui/settings.glade:2965
 msgid "Show page number in title bar"
 msgstr "Mostra el número de pàgina a la barra de títol"
 
-#: ../ui/settings.glade:3004
+#: ../ui/settings.glade:3005
 msgid "Border color for current page and other selections"
 msgstr "El color de la vora de la pàgina actual i altres seleccions"
 
-#: ../ui/settings.glade:3018
+#: ../ui/settings.glade:3019
 msgid "Border color"
 msgstr "Color de la vora"
 
-#: ../ui/settings.glade:3031
+#: ../ui/settings.glade:3032
 msgid "Background color between pages"
 msgstr "Color de fons entre pàgines"
 
-#: ../ui/settings.glade:3057
+#: ../ui/settings.glade:3058
 msgid "Selection Color (Text, Stroke Selection etc.)"
 msgstr "Color de selecció (selecció de text, traç...)"
 
-#: ../ui/settings.glade:3083
+#: ../ui/settings.glade:3084
 msgid "Active Selection Color (Search Results etc.)"
 msgstr "Color de selecció activa (com ara resultats de cerca)"
 
-#: ../ui/settings.glade:3105
+#: ../ui/settings.glade:3106
 msgid "Use available Stock Icons (requires restart)"
 msgstr "Fes servir les icones disponibles del sistema (cal reiniciar)"
 
-#: ../ui/settings.glade:3126
+#: ../ui/settings.glade:3127
 msgid "Icon Theme"
-msgstr "Tema d'icones"
+msgstr "Tema d'icones "
 
-#: ../ui/settings.glade:3141
+#: ../ui/settings.glade:3142
 msgid "Color"
 msgstr "Color"
 
-#: ../ui/settings.glade:3142
-msgid "Lucide"
-msgstr "Lucide"
-
-#: ../ui/settings.glade:3155
+#: ../ui/settings.glade:3156
 msgid "(requires restart)"
 msgstr "(cal reiniciar)"
 
-#: ../ui/settings.glade:3178
+#: ../ui/settings.glade:3179
 msgid "Theme Variant:"
 msgstr "Variant del tema:"
 
-#: ../ui/settings.glade:3198
+#: ../ui/settings.glade:3199
 msgid "Use system default"
 msgstr "Fes servir el predeterminat del sistema"
 
-#: ../ui/settings.glade:3199
+#: ../ui/settings.glade:3200
 msgid "Force light theme"
 msgstr "Força el tema clar"
 
-#: ../ui/settings.glade:3200
+#: ../ui/settings.glade:3201
 msgid "Force dark theme"
 msgstr "Força el tema fosc"
 
-#: ../ui/settings.glade:3213
+#: ../ui/settings.glade:3214
 msgid "(this may not work, depending on your system theme)"
-msgstr "(potser no funcioni, en funció del tema del vostre sistema)"
+msgstr "(potser no funciona: depèn del tema del vostre sistema)"
 
-#: ../ui/settings.glade:3234
+#: ../ui/settings.glade:3235
 msgid "Colors"
 msgstr "Colors"
 
-#: ../ui/settings.glade:3250
+#: ../ui/settings.glade:3251
 msgid "Global"
 msgstr "Global"
 
-#: ../ui/settings.glade:3283
+#: ../ui/settings.glade:3279
+msgid "Recolor Drawing Area (might introduce lags when moving selections)"
+msgstr "Àrea de canvi de color (pot provocar alentiment quan es mouen les seleccions)"
+
+#: ../ui/settings.glade:3284
+msgid "Recolors the drawing area so that white regions get the dark color and black regions get the light color. Other colors are interpolated accordingly."
+msgstr "Canvia el color de l'àrea de dibuix i fa que les regions blanques es pintin de color fosc i les regions negres es pintin de color clar. Els altres colors s'interpolen com correspongui."
+
+#: ../ui/settings.glade:3294
+msgid "Recolor Previews in the Sidebar"
+msgstr "Canvia el color de les previsualitzacions de barra lateral"
+
+#: ../ui/settings.glade:3299
+msgid "Recolors the previews in the sidebar (Page/Layer Preview) so that white regions get the dark color and black regions get the light color. Other colors are interpolated accordingly."
+msgstr "Canvia el color de les previsualitzacions de la barra lateral (Pàgina/Previsualització de capes) i fa que les regions blanques es pintin de color fosc i les regions negres es pintin de color clar. Els altres colors s'interpolen com correspongui."
+
+#: ../ui/settings.glade:3313
+msgid "The color black regions are translated to"
+msgstr "Les regions de color negre es converteixen a"
+
+#: ../ui/settings.glade:3327
+msgid "The color white regions are translated to"
+msgstr "Les regions de color blanc es converteixen a"
+
+#: ../ui/settings.glade:3342
+msgid "Dark Color"
+msgstr "Color fosc"
+
+#: ../ui/settings.glade:3356
+msgid "Light Color"
+msgstr "Color clar"
+
+#: ../ui/settings.glade:3369
+msgid "Recoloring / Inverting colors"
+msgstr "Canvi / Inversió de colors"
+
+#: ../ui/settings.glade:3401
 msgid "Cursor icon for pen"
 msgstr "Icona de cursor per al llapis"
 
-#: ../ui/settings.glade:3298
+#: ../ui/settings.glade:3416
 msgctxt "stylus cursor uses no icon"
 msgid "No icon"
 msgstr "Sense icona"
 
-#: ../ui/settings.glade:3299
+#: ../ui/settings.glade:3417
 msgctxt "stylus cursor uses a small dot"
 msgid "Small dot icon"
 msgstr "Icona de punt petit"
 
-#: ../ui/settings.glade:3300
+#: ../ui/settings.glade:3418
 msgctxt "stylus cursor uses a big pen icon"
 msgid "Big pen icon"
 msgstr "Icona de llapis gran"
 
-#: ../ui/settings.glade:3301
+#: ../ui/settings.glade:3419
 msgctxt "stylus cursor uses system cursor"
 msgid "System cursor"
 msgstr "Cursor del sistema"
 
-#: ../ui/settings.glade:3326
+#: ../ui/settings.glade:3444
 msgid "Highlight cursor position"
 msgstr "Ressalta la posició del cursor"
 
-#: ../ui/settings.glade:3331
+#: ../ui/settings.glade:3449
 msgid "Draw a transparent circle around the cursor"
 msgstr "Dibuixa un cercle translúcid al voltant del cursor"
 
-#: ../ui/settings.glade:3349 ../ui/settings.glade:3492
+#: ../ui/settings.glade:3467 ../ui/settings.glade:3610
 msgid "Choose the color to use for \"Highlight cursor position\""
 msgstr "Escolliu el color que s'ha de fer servir per a «Ressalta la posició del cursor»."
 
-#: ../ui/settings.glade:3363
+#: ../ui/settings.glade:3481
 msgid "Circle Color"
 msgstr "Color del cercle"
 
-#: ../ui/settings.glade:3387 ../ui/settings.glade:3438
-#: ../ui/settings.glade:4904
+#: ../ui/settings.glade:3505 ../ui/settings.glade:3556
+#: ../ui/settings.glade:5022
 msgid "pixels"
 msgstr "píxels"
 
-#: ../ui/settings.glade:3415
+#: ../ui/settings.glade:3533
 msgid "Radius"
 msgstr "Radi"
 
-#: ../ui/settings.glade:3451
+#: ../ui/settings.glade:3569
 msgid "30"
 msgstr "30"
 
-#: ../ui/settings.glade:3467
+#: ../ui/settings.glade:3585
 msgid "Border Width"
 msgstr "Amplada de la vora"
 
-#: ../ui/settings.glade:3506
+#: ../ui/settings.glade:3624
 msgid "Border Color"
 msgstr "Color de la vora"
 
-#: ../ui/settings.glade:3538
+#: ../ui/settings.glade:3656
 msgid "Cursor"
 msgstr "Cursor"
 
-#: ../ui/settings.glade:3563
+#: ../ui/settings.glade:3681
 msgid "Show sidebar on the right side"
 msgstr "Mostra la barra lateral a la dreta"
 
-#: ../ui/settings.glade:3578
+#: ../ui/settings.glade:3696
 msgid "Show vertical scrollbar on the left side"
 msgstr "Mostra la barra de desplaçament vertical a l'esquerra"
 
-#: ../ui/settings.glade:3597
+#: ../ui/settings.glade:3715
 msgid "Left / Right-Handed"
 msgstr "Esquerrà o dretà"
 
-#: ../ui/settings.glade:3622
+#: ../ui/settings.glade:3740
 msgid "Page numbering  "
 msgstr "Numeració de pàgines  "
 
-#: ../ui/settings.glade:3638
+#: ../ui/settings.glade:3756
 msgid "Below preview"
 msgstr "Vista prèvia"
 
-#: ../ui/settings.glade:3639
+#: ../ui/settings.glade:3757
 msgid "Circle background"
 msgstr "Fons circular"
 
-#: ../ui/settings.glade:3640
+#: ../ui/settings.glade:3758
 msgid "Square background"
 msgstr "Fons quadrat"
 
-#: ../ui/settings.glade:3660
+#: ../ui/settings.glade:3778
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: ../ui/settings.glade:3686
+#: ../ui/settings.glade:3804
 msgid "Hide the horizontal scrollbar"
 msgstr "Amaga la barra de desplaçament horitzontal"
 
-#: ../ui/settings.glade:3701
+#: ../ui/settings.glade:3819
 msgid "Hide the vertical scrollbar"
 msgstr "Amaga la barra de desplaçament vertical"
 
-#: ../ui/settings.glade:3716
+#: ../ui/settings.glade:3834
 msgid "Disable scrollbar fade out"
 msgstr "Desactiva l'ocultació de la barra de desplaçament"
 
-#: ../ui/settings.glade:3734
+#: ../ui/settings.glade:3852
 msgid "Scrollbars"
 msgstr "Barres de desplaçament"
 
-#: ../ui/settings.glade:3788
+#: ../ui/settings.glade:3906
 msgid "When an element is selected and moved past the visible portion of the canvas, pan the screen by an amount equal to this percentage of the visible part of the canvas. "
 msgstr "Quan se selecciona i es mou un element més enllà de la porció visible del llenç, desplaça la pantalla aquest percentatge de la part visible del llenç."
 
-#: ../ui/settings.glade:3790
+#: ../ui/settings.glade:3908
 msgid "Base speed"
 msgstr "Velocitat base"
 
-#: ../ui/settings.glade:3801
+#: ../ui/settings.glade:3919
 msgid "Multiply the panning speed by up to this amount, based on how much of the selected element is out of view."
 msgstr "Multiplica la velocitat de desplaçament per aquesta quantitat, en funció de la porció de l'element seleccionat està fora de la vista."
 
-#: ../ui/settings.glade:3803
+#: ../ui/settings.glade:3921
 msgid "Max multiplier"
 msgstr "Multiplicador màxim"
 
-#: ../ui/settings.glade:3816
+#: ../ui/settings.glade:3934
 msgid "Selection Edge Panning"
 msgstr "Marges de la selecció de vores"
 
-#: ../ui/settings.glade:3841 ../ui/settings.glade:3915
-#: ../ui/mainmenubar.xml:206
+#: ../ui/settings.glade:3959 ../ui/settings.glade:4033
+#: ../ui/mainmenubar.xml:205
 msgid "Show Menubar"
 msgstr "Mostra la barra de menús"
 
-#: ../ui/settings.glade:3856 ../ui/settings.glade:3930
+#: ../ui/settings.glade:3974 ../ui/settings.glade:4048
 msgid "Show Toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: ../ui/settings.glade:3871 ../ui/settings.glade:3960
-#: ../ui/mainmenubar.xml:211
+#: ../ui/settings.glade:3989 ../ui/settings.glade:4078
+#: ../ui/mainmenubar.xml:210
 msgid "Show Sidebar"
 msgstr "Mostra la barra lateral"
 
-#: ../ui/settings.glade:3890 ../ui/mainmenubar.xml:194
+#: ../ui/settings.glade:4008 ../ui/mainmenubar.xml:193
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
-#: ../ui/settings.glade:3945
+#: ../ui/settings.glade:4063
 msgid "Go Fullscreen"
 msgstr "Pantalla completa"
 
-#: ../ui/settings.glade:3980
+#: ../ui/settings.glade:4098
 msgid "Select toolbar:"
 msgstr "Tria una barra d'eines:"
 
-#: ../ui/settings.glade:4013
+#: ../ui/settings.glade:4131
 msgid "Presentation Mode"
 msgstr "Mode de presentació"
 
-#: ../ui/settings.glade:4042
+#: ../ui/settings.glade:4160
 msgid "Pre-load pages before"
 msgstr "Precarrega pàgines anteriors"
 
-#: ../ui/settings.glade:4054
+#: ../ui/settings.glade:4172
 msgid "Pre-load pages after"
 msgstr "Pregarrega pàgines posteriors"
 
-#: ../ui/settings.glade:4091
+#: ../ui/settings.glade:4209
 msgid "Clear cached paged while scrolling"
 msgstr "Esborra les pàgines de la memòria cau quan es desplaça"
 
-#: ../ui/settings.glade:4118
+#: ../ui/settings.glade:4236
 msgid "Performance"
 msgstr "Rendiment"
 
-#: ../ui/settings.glade:4149
+#: ../ui/settings.glade:4267
 msgid "View"
 msgstr "Visualització"
 
-#: ../ui/settings.glade:4198
+#: ../ui/settings.glade:4316
 msgid "Speed for Ctrl + Scroll"
 msgstr "Velocitat de desplaçament amb Ctrl"
 
-#: ../ui/settings.glade:4225
+#: ../ui/settings.glade:4343
 msgid "Speed for a Zoomstep"
 msgstr "Variació del zoom a cada pas"
 
-#: ../ui/settings.glade:4252 ../ui/settings.glade:4263
-msgid "%"
-msgstr "%"
-
-#: ../ui/settings.glade:4285
+#: ../ui/settings.glade:4403
 msgid "Zoom Speed"
 msgstr "Variació del zoom"
 
-#: ../ui/settings.glade:4312
+#: ../ui/settings.glade:4430
 msgid "<i>To make sure on 100% zoom the size of elements is natural. (requires restart)</i>"
 msgstr "<i>Per a assegurar que a un zoom del 100 % la mida dels elements és natural. (cal reiniciar)</i>"
 
-#: ../ui/settings.glade:4332
+#: ../ui/settings.glade:4450
 msgid "<i>Put a ruler on your screen and move the slider until both rulers match.</i>"
-msgstr "<i>Posa un regle a la pantalla i moveu el botó lliscant fins que coincideixin els regles.</i>"
+msgstr "<i>Poseu un regle a la pantalla i moveu el botó lliscant fins que coincideixin les mesures.</i>"
 
-#: ../ui/settings.glade:4379
+#: ../ui/settings.glade:4497
 msgid "The unit of the ruler is cm"
 msgstr "La unitat del regle és el cm."
 
-#: ../ui/settings.glade:4400
+#: ../ui/settings.glade:4518
 msgid "Display DPI Calibration"
 msgstr "Calibració dels ppp de la pantalla"
 
-#: ../ui/settings.glade:4431
+#: ../ui/settings.glade:4549
 msgid "Zoom"
 msgstr "Zoom"
 
-#: ../ui/settings.glade:4480
+#: ../ui/settings.glade:4598
 msgid "<i>If you add additional space beside the pages you can choose the area of the screen you would like to work on.</i>"
 msgstr "<i>Si afegiu espai addicional al costat de les pàgines, podeu escollir l'àrea de la pantalla on voleu treballar.</i>"
 
-#: ../ui/settings.glade:4603
+#: ../ui/settings.glade:4721
 msgid "Add additional horizontal space"
 msgstr "Afegeix espai horitzontal addicional"
 
-#: ../ui/settings.glade:4619
+#: ../ui/settings.glade:4737
 msgid "Add additional vertical space"
 msgstr "Afegeix espai vertical addicional"
 
-#: ../ui/settings.glade:4637
+#: ../ui/settings.glade:4755
 msgid "<i>or</i>"
 msgstr "<i>o</i>"
 
-#: ../ui/settings.glade:4649
+#: ../ui/settings.glade:4767
 msgid "Unlimited scrolling"
 msgstr "Desplaçament il·limitat"
 
-#: ../ui/settings.glade:4673
+#: ../ui/settings.glade:4791
 msgid "<i>The amount is specified in pixels.</i>"
 msgstr "<i>La quantitat s'especifica en píxels.</i>"
 
-#: ../ui/settings.glade:4705
+#: ../ui/settings.glade:4823
 msgid "Scrolling outside the page"
 msgstr "Desplaçament fora de la pàgina"
 
-#: ../ui/settings.glade:4732
+#: ../ui/settings.glade:4850
 msgid "Offset first page this many pages when <b>Pair Pages</b> enabled"
 msgstr "Desfassa la primera pàgina aquest nombre de pàgines quan l'opció <b>Pàgines emparellades</b> estigui activada."
 
-#: ../ui/settings.glade:4733
+#: ../ui/settings.glade:4851
 msgid "First Page Offset "
 msgstr "Òfset de la primera pàgina "
 
-#: ../ui/settings.glade:4746
+#: ../ui/settings.glade:4864
 msgid "Usually 0 or 1"
 msgstr "Normalment 0 o 1"
 
-#: ../ui/settings.glade:4765
+#: ../ui/settings.glade:4883
 msgid "Paired Pages"
 msgstr "Pàgines emparellades"
 
-#: ../ui/settings.glade:4791
+#: ../ui/settings.glade:4909
 msgid "when scrolling to end of last page"
-msgstr "quan es desplaça fins al final de l'última pàgina"
+msgstr "Quan es desplaça fins al final de l'última pàgina"
 
-#: ../ui/settings.glade:4806
+#: ../ui/settings.glade:4924
 msgid "when drawing on last page"
-msgstr "quan es dibuixa a l'última pàgina"
+msgstr "Quan es dibuixa a l'última pàgina"
 
-#: ../ui/settings.glade:4821
+#: ../ui/settings.glade:4939
 msgid "disabled"
-msgstr "desactivat"
+msgstr "Desactivat"
 
-#: ../ui/settings.glade:4839
+#: ../ui/settings.glade:4957
 msgid "Automatically Add Empty Last Page (excluding PDFs)"
-msgstr "Afegeix automàticament una última pàgina buida (excloent els PDF)."
+msgstr "Afegeix automàticament una pàgina buida al final (excepte als PDF)"
 
-#: ../ui/settings.glade:4863
+#: ../ui/settings.glade:4981
 msgid "Enable  with determination radius of "
 msgstr "Activa amb un radi de determinació de "
 
-#: ../ui/settings.glade:4868
+#: ../ui/settings.glade:4986
 msgid "Drag LEFT from start point acts like shift key is being held.\n"
 "Drag UP acts as if Control key is being held.\n\n"
 "Determination Radius: Radius at which modifiers will lock in until finished drawing.\n\n"
@@ -3414,166 +3485,159 @@ msgstr "Arrossegar a l'ESQUERRA des del punt inicial actua com si es premés la 
 "Radi de determinació: Radi en el qual els modificadors estaran blocats fins que s'acabi de dibuixar.\n\n"
 "<i>Útil si es vol operar sense teclat.</i>"
 
-#: ../ui/settings.glade:4918
+#: ../ui/settings.glade:5036
 msgid "Drawing Tools - Set Modifiers by Draw Direction (Experimental)"
 msgstr "Eines de dibuix ‒ Estableix els modificadors amb la direcció de dibuix (experimental)"
 
-#: ../ui/settings.glade:4935
+#: ../ui/settings.glade:5053
 msgid "Preserve line width"
 msgstr "Mantén el gruix de la línia"
 
-#: ../ui/settings.glade:4940
+#: ../ui/settings.glade:5058
 msgid "After resizing a selection, the line width of all strokes will be the same as before the resizing operation. "
 msgstr "Després de redimensionar una selecció, el gruix dels traços serà el mateix que abans de l'operació de redimensionament. "
 
-#: ../ui/settings.glade:4951
+#: ../ui/settings.glade:5069
 msgid "Resizing"
 msgstr "Redimensionament"
 
-#: ../ui/settings.glade:4987
+#: ../ui/settings.glade:5105
 msgid "Rotation snapping tolerance"
 msgstr "Tolerància de l'ajust a la rotació"
 
-#: ../ui/settings.glade:4999
+#: ../ui/settings.glade:5117
 msgid "Grid snapping tolerance"
 msgstr "Tolerància de l'ajust a la graella"
 
-#: ../ui/settings.glade:5041
+#: ../ui/settings.glade:5159
 msgid "Grid size"
 msgstr "Mida de la graella"
 
-#: ../ui/settings.glade:5072
+#: ../ui/settings.glade:5190
 msgid "Use snapping for recognized shapes"
 msgstr "Fes servir l'ajustament per a formes reconegudes"
 
-#: ../ui/settings.glade:5076
+#: ../ui/settings.glade:5194
 msgid "If activated, shapes that have been recognized by the shape recognizer will be snapped to the grid automatically. This may lead to unexpected results if you have the shape recognizer turned on while writing."
 msgstr "Si s'activa, les formes que es reconeguin amb el reconeixedor de formes s'ajustaran a la graella automàticament. Això pot provocar resultats inesperats si teniu el reconeixedor activat mentre escriviu."
 
-#: ../ui/settings.glade:5091
+#: ../ui/settings.glade:5209
 msgid "Snapping"
 msgstr "Ajustament"
 
-#: ../ui/settings.glade:5119
+#: ../ui/settings.glade:5237
 msgid "Minimum Stroke Size"
-msgstr "Mida minima del traç"
+msgstr "Mida mínima del traç"
 
-#: ../ui/settings.glade:5132
-msgid "0.20"
-msgstr "0,20"
-
-#: ../ui/settings.glade:5149
-msgid "Stroke Recognizer"
-msgstr "Reconeixedor de traços"
-
-#: ../ui/settings.glade:5175
+#: ../ui/settings.glade:5292
+msgctxt "Short taps/clicks will trigger special actions"
 msgid "Enable Tap action"
 msgstr "Activa l'acció per toc"
 
-#: ../ui/settings.glade:5180
+#: ../ui/settings.glade:5297
 msgid "Do not draw for inputs of short time and length unless it comes in short succession. Instead, show floating toolbox."
 msgstr "No dibuixis entrades amb temps i llargada curtes excepte si es produeixen en successions en breus intervals de temps. En el seu lloc, mostra la caixa d'eines flotant."
 
-#: ../ui/settings.glade:5192
-msgid "Ignore Time (ms)"
-msgstr "Temps a ignorar (ms)"
+#: ../ui/settings.glade:5309
+msgid "Time limit (ms)"
+msgstr "Límit de temps (ms)"
 
-#: ../ui/settings.glade:5204
-msgid "How short (time)  AND...\n\n"
+#: ../ui/settings.glade:5321
+msgid "Time limit: taps lasting longer will not trigger a special action\n\n"
 "<i>Recommended: 150ms</i>"
-msgstr "Quan curt (temps) i...\n\n"
-"<i>Recomanat: 150 ms</i>"
+msgstr "Temps límit: els tocs que durin més no activaran l'acció especial.\n\n"
+"<i>Valor recomanat: 150ms</i>"
 
-#: ../ui/settings.glade:5224
-msgid "How short (screen mm)  of the stroke  AND...\n\n"
+#: ../ui/settings.glade:5341
+msgid "Length limit: taps moving further away will not trigger a special action\n\n"
 "<i>Recommended: 1 mm</i>"
-msgstr "Què curt (mm de pantalla)  del traç  i...\n\n"
-"<i>Recomanat: 1 mm</i>"
+msgstr "Límit de llargada: els tocs que es moguin més d'aquesta distància no activaran l'acció especial.\n\n"
+"<i>Valor recomanat: 1 mm</i>"
 
-#: ../ui/settings.glade:5244
-msgid "Max Length (mm)"
-msgstr "Llargada màxima (mm)"
+#: ../ui/settings.glade:5361
+msgid "Length limit (mm)"
+msgstr "Límit de llargada (mm)"
 
-#: ../ui/settings.glade:5255
-msgid "Successive (ms)"
-msgstr "Successius (ms)"
+#: ../ui/settings.glade:5372
+msgid "Frequency limit (ms)"
+msgstr "Límit de freqüència (ms)"
 
-#: ../ui/settings.glade:5267
-msgid "... AND How much time must have passed since last stroke.\n\n"
+#: ../ui/settings.glade:5384
+msgid "Frequency limit: A tap happening within this time period after a stroke will not trigger a special action.\n\n"
 "<i>Recommended: 500ms</i>"
-msgstr "... i quant de temps ha passat des de l'últim traç.\n\n"
-"<i>Recomanat: 500 ms</i>"
+msgstr "Límit de freqüència: Els tocs que succeixin en aquest període de temps després d'un traç no activaran l'acció especial.\n\n"
+"<i>Valor recomanat: 500 ms</i>"
 
-#: ../ui/settings.glade:5284
+#: ../ui/settings.glade:5401
 msgid "Try to select object first."
-msgstr "Intenteu seleccionar primer l'objecte."
+msgstr "Intenta seleccionar primer l'objecte"
 
-#: ../ui/settings.glade:5289 ../ui/settings.glade:5319
+#: ../ui/settings.glade:5406 ../ui/settings.glade:5436
 msgid "Try to select object first; if nothing selected then show floating toolbox if enabled."
-msgstr "Intenteu seleccionar primer l'element; si no es selecciona res i s'ha activat l'acció corresponent, es mostrarà la caixa d'eines flotant."
+msgstr "Intenteu seleccionar primer l'element; si no se selecciona res i s'ha activat l'acció corresponent, es mostrarà la caixa d'eines flotant."
 
-#: ../ui/settings.glade:5302
+#: ../ui/settings.glade:5419
 msgid "All three conditions must be met before stroke is ignored.\n"
 "It must be short in time and length and we can't have ignored another stroke recently."
 msgstr "S'han de complir totes tres condicions per tal d'ignorar el traç.\n"
 "Ha de ser curt en temps i llargada i no es pot haver ignorat un traç recentment."
 
-#: ../ui/settings.glade:5305
+#: ../ui/settings.glade:5422
 msgid "Settings:"
 msgstr "Configuració:"
 
-#: ../ui/settings.glade:5314
+#: ../ui/settings.glade:5431
 msgid "Show Floating Toolbox"
 msgstr "Mostra la caixa d'eines flotant"
 
-#: ../ui/settings.glade:5333
+#: ../ui/settings.glade:5450
 msgid "Action on Tool Tap"
 msgstr "Acció amb l'eina de toc"
 
-#: ../ui/settings.glade:5361
+#: ../ui/settings.glade:5478
 msgid "<i>Re-render PDF backgrounds more often while zooming for better render quality.\n"
 "<b>Note:</b> This should not affect print quality.</i>"
 msgstr "<i>Torna a renderitzar els fons de PDF més sovint quan es fa zoom per a millorar-ne la qualitat.\n"
 "<b>Avís:</b> Aquesta opció no afecta a la qualitat d'impressió.</i>"
 
-#: ../ui/settings.glade:5383
+#: ../ui/settings.glade:5500
 msgid "When zoomed in on a high-resolution PDF, each re-render can take a long time. Setting this to a large value causes these re-renders to happen less often.\n\n"
 "Set this to 0% to always re-render on zoom."
 msgstr "Quan es fa zoom en un PDF d'alta resolució, cada nova renderització pot trigar bastant temps. Si s'estableix aquest valor a un nombre gran, les renderitzacions es faran menys sovint."
 
-#: ../ui/settings.glade:5386
+#: ../ui/settings.glade:5503
 msgid "Re-render when the page's zoom changes by more than "
 msgstr "Torna a renderitzar quan el zoom de la pàgina canvia més d'un "
 
-#: ../ui/settings.glade:5399
+#: ../ui/settings.glade:5516
 msgid "0.00"
 msgstr "0,00"
 
-#: ../ui/settings.glade:5416
+#: ../ui/settings.glade:5533
 msgid "%."
-msgstr "%,"
+msgstr " %"
 
-#: ../ui/settings.glade:5437
+#: ../ui/settings.glade:5554
 msgid "PDF Cache"
 msgstr "Memòria cau del PDF"
 
-#: ../ui/settings.glade:5468
+#: ../ui/settings.glade:5585
 msgid "Drawing Area"
 msgstr "Àrea de dibuix"
 
-#: ../ui/settings.glade:5515
+#: ../ui/settings.glade:5632
 msgid "<i>Select the tool and Settings if you press the Default Button.</i>"
 msgstr "<i>Selecciona l'eina i la seva configuració si premeu el botó per defecte.</i>"
 
-#: ../ui/settings.glade:5567
+#: ../ui/settings.glade:5684
 msgid "<b>Default</b>"
 msgstr "<b>Predeterminat</b>"
 
-#: ../ui/settings.glade:5607
+#: ../ui/settings.glade:5724
 msgid "Defaults"
 msgstr "Valors per defecte"
 
-#: ../ui/settings.glade:5660
+#: ../ui/settings.glade:5777
 msgid "<i>\n"
 "Using the checkbox the audio system can be disabled or enabled for future sessions (restart required).\n"
 "Disabling audio for a single session can be achieved using the <tt>--disable-audio</tt> flag on the command line.\n"
@@ -3582,93 +3646,89 @@ msgstr "<i>\n"
 "Amb la casella de selecció, el sistema d'àudio es pot activar o desactivar per a sessions posteriors (cal reiniciar). Si es vol desactivar l'àudio només per a una sessió, es pot fer amb <tt>--disable-audio</tt> a la línia d'ordres.\n"
 "</i>"
 
-#: ../ui/settings.glade:5676
+#: ../ui/settings.glade:5793
 msgid "Disable Audio"
 msgstr "Desactiva l'àudio"
 
-#: ../ui/settings.glade:5698
+#: ../ui/settings.glade:5815
 msgid "Enable or Disable Audio"
 msgstr "Activa o desactiva el so"
 
-#: ../ui/settings.glade:5725
+#: ../ui/settings.glade:5842
 msgid "<i>Audio recordings are currently stored in a separate folder and referenced from the journal.</i>"
 msgstr "<i>Els enregistraments d'àudio actualment s'emmagatzemen en una carpeta per separat i que el quadern té com a referència.</i>"
 
-#: ../ui/settings.glade:5744 ../ui/settings.glade:5780
+#: ../ui/settings.glade:5861 ../ui/settings.glade:5897
 msgid "Storage Folder"
 msgstr "Carpeta d'emmagatzematge"
 
-#: ../ui/settings.glade:5759
+#: ../ui/settings.glade:5876
 msgid "Select Folder"
 msgstr "Tria una carpeta"
 
-#: ../ui/settings.glade:5807
+#: ../ui/settings.glade:5924
 msgid "<i>Specify the audio devices used for recording and playback of audio attachments.\n"
 "If available select <small><tt>pulse</tt></small> as input / output device.</i>"
 msgstr "<i>Especifica els dispositius de so que es fan servir per a enregistrar i reproduir els adjunts de so.\n"
 "Si està disponible, trieu <small><tt>pulse</tt></small> com a dispositiu d'entrada/sortida.</i>"
 
-#: ../ui/settings.glade:5831
+#: ../ui/settings.glade:5948
 msgid "Input Device"
 msgstr "Dispositiu d'entrada"
 
-#: ../ui/settings.glade:5853
+#: ../ui/settings.glade:5970
 msgid "Output Device"
 msgstr "Dispositiu de sortida"
 
-#: ../ui/settings.glade:5884
+#: ../ui/settings.glade:6001
 msgid "Audio Devices"
 msgstr "Dispositius d'àudio"
 
-#: ../ui/settings.glade:5913
+#: ../ui/settings.glade:6030
 msgid "Sample Rate"
 msgstr "Freqüència de mostreig"
 
-#: ../ui/settings.glade:5924
+#: ../ui/settings.glade:6041
 msgid "Gain"
 msgstr "Guany"
 
-#: ../ui/settings.glade:5971
+#: ../ui/settings.glade:6088
 msgid "Recording Quality"
 msgstr "Qualitat de l'enregistrament"
 
-#: ../ui/settings.glade:5997
+#: ../ui/settings.glade:6114
 msgid "Default Seek Time (in seconds)"
 msgstr "Temps de cerca per defecte (en segons)"
 
-#: ../ui/settings.glade:6010
+#: ../ui/settings.glade:6127
 msgid "1,00"
 msgstr "1,00"
 
-#: ../ui/settings.glade:6029
+#: ../ui/settings.glade:6146
 msgid "Playback Settings"
 msgstr "Configuració de reproducció"
 
-#: ../ui/settings.glade:6043
+#: ../ui/settings.glade:6160
 msgid "<i>Changes take only effect on new recordings and playbacks.</i>"
 msgstr "<i>Els canvis s'apliquen només a enregistraments i reproduccions noves.</i>"
 
-#: ../ui/settings.glade:6074
+#: ../ui/settings.glade:6191
 msgid "Audio Recording"
 msgstr "Enregistrament d'àudio"
 
-#: ../ui/settings.glade:6099
-msgid "LaTeX"
-msgstr "LaTeX"
-
-#: ../ui/settings.glade:6147
+#: ../ui/settings.glade:6264
 msgid "<i>Select language (requires restart)</i>"
 msgstr "<i>Trieu un idioma (cal reiniciar)</i>"
 
-#: ../ui/settings.glade:6179 ../ui/settings.glade:6225
+#: ../ui/settings.glade:6296 ../ui/settings.glade:6342
 msgid "Language"
 msgstr "Idioma"
 
-#: ../ui/settings.glade:6195
+#: ../ui/settings.glade:6312
 msgid "Language Settings"
 msgstr "Opcions d'idioma"
 
-#: ../ui/settings.glade:6249
+#: ../ui/settings.glade:6366
 msgid "Palette"
 msgstr "Paleta"
 
@@ -3678,11 +3738,11 @@ msgstr "Dispositiu"
 
 #: ../ui/settingsButtonConfig.glade:44
 msgid "Disable drawing for this device"
-msgstr "Desactiva dibuix per a aquest dispositiu"
+msgstr "Desactiva aquest dispositiu per a dibuixar"
 
 #: ../ui/settingsButtonConfig.glade:125
 msgid "Eraser Type - don't change"
-msgstr "Goma d'esborrar ‒ no canviar el tipus"
+msgstr "Goma d'esborrar ‒ sense canviar-ne el tipus"
 
 #: ../ui/settingsButtonConfig.glade:126 ../ui/settingsButtonConfig.glade:144
 msgid "Standard"
@@ -3694,11 +3754,11 @@ msgstr "Pinta (com si fos líquid corrector)"
 
 #: ../ui/settingsButtonConfig.glade:128
 msgid "Delete stroke"
-msgstr "Esborra traços"
+msgstr "Esborra traços sencers"
 
 #: ../ui/settingsButtonConfig.glade:143
 msgid "Stroke Type - don't change"
-msgstr "Traç ‒ no canviar el tipus"
+msgstr "Traç ‒ sense canviar-ne el tipus"
 
 #: ../ui/settingsButtonConfig.glade:145
 msgid "Dashed"
@@ -3765,460 +3825,452 @@ msgstr "_Comenta un PDF"
 msgid "Save As"
 msgstr "Anomena i desa"
 
-#: ../ui/mainmenubar.xml:39
+#: ../ui/mainmenubar.xml:38
 msgid "_Export as PDF"
 msgstr "_Exporta a PDF"
 
-#: ../ui/mainmenubar.xml:43
+#: ../ui/mainmenubar.xml:42
 msgid "Export as..."
 msgstr "Exporta com a..."
 
-#: ../ui/mainmenubar.xml:55
+#: ../ui/mainmenubar.xml:54
 msgid "Quit"
 msgstr "Surt"
 
-#: ../ui/mainmenubar.xml:62
+#: ../ui/mainmenubar.xml:61
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../ui/mainmenubar.xml:94
+#: ../ui/mainmenubar.xml:93
 msgid "Select All"
 msgstr "Selecciona-ho tot"
 
-#: ../ui/mainmenubar.xml:101
+#: ../ui/mainmenubar.xml:100
 msgid "Find"
 msgstr "Cerca"
 
-#: ../ui/mainmenubar.xml:115
+#: ../ui/mainmenubar.xml:114
 msgid "Arrange Selection"
 msgstr "Ordena la selecció"
 
-#: ../ui/mainmenubar.xml:118
+#: ../ui/mainmenubar.xml:117
 msgid "Bring to Front"
 msgstr "Mou a dalt de tot"
 
-#: ../ui/mainmenubar.xml:123
+#: ../ui/mainmenubar.xml:122
 msgid "Bring Forward"
-msgstr "Mou avant"
+msgstr "Mou amunt"
 
-#: ../ui/mainmenubar.xml:128
+#: ../ui/mainmenubar.xml:127
 msgid "Send Backward"
-msgstr "Mou enrere"
+msgstr "Mou avall"
 
-#: ../ui/mainmenubar.xml:133
+#: ../ui/mainmenubar.xml:132
 msgid "Send to Back"
 msgstr "Mou al fons"
 
-#: ../ui/mainmenubar.xml:142
+#: ../ui/mainmenubar.xml:141
 msgid "Move Selection Layer Up"
 msgstr "Mou la capa de selecció amunt"
 
-#: ../ui/mainmenubar.xml:146
+#: ../ui/mainmenubar.xml:145
 msgid "Move Selection Layer Down"
 msgstr "Mou la capa de selecció avall"
 
-#: ../ui/mainmenubar.xml:162
+#: ../ui/mainmenubar.xml:161
 msgid "Preferences"
 msgstr "Preferències"
 
-#: ../ui/mainmenubar.xml:167
+#: ../ui/mainmenubar.xml:166
 msgid "T_oolbars"
 msgstr "_Barres d'eines"
 
-#: ../ui/mainmenubar.xml:170
+#: ../ui/mainmenubar.xml:169
 msgid "_Manage"
 msgstr "_Gestiona"
 
-#: ../ui/mainmenubar.xml:174
+#: ../ui/mainmenubar.xml:173
 msgid "_Customize"
 msgstr "_Personalitza"
 
-#: ../ui/mainmenubar.xml:182
+#: ../ui/mainmenubar.xml:181
 msgid "_View"
 msgstr "_Visualitza"
 
-#: ../ui/mainmenubar.xml:185
+#: ../ui/mainmenubar.xml:184
 msgid "_Pair Pages"
 msgstr "Pàgines _emparellades"
 
-#: ../ui/mainmenubar.xml:189
+#: ../ui/mainmenubar.xml:188
 msgid "_Presentation Mode"
 msgstr "Mode de _presentació"
 
-#: ../ui/mainmenubar.xml:201
+#: ../ui/mainmenubar.xml:200
 msgid "Show Toolbars"
 msgstr "Mostra les barres d'eines"
 
-#: ../ui/mainmenubar.xml:218
+#: ../ui/mainmenubar.xml:217
 msgid "Layout"
 msgstr "Disposició"
 
-#: ../ui/mainmenubar.xml:221
+#: ../ui/mainmenubar.xml:220
 msgid "_Horizontal"
 msgstr "_Horitzontal"
 
-#: ../ui/mainmenubar.xml:226
+#: ../ui/mainmenubar.xml:225
 msgid "_Vertical"
 msgstr "_Vertical"
 
-#: ../ui/mainmenubar.xml:233
+#: ../ui/mainmenubar.xml:232
 msgid "_Left to Right"
 msgstr "D'_esquerra a dreta"
 
-#: ../ui/mainmenubar.xml:238
+#: ../ui/mainmenubar.xml:237
 msgid "_Right to Left"
 msgstr "De d_reta a esquerra"
 
-#: ../ui/mainmenubar.xml:245
+#: ../ui/mainmenubar.xml:244
 msgid "_Top to Bottom"
 msgstr "De _dalt cap avall"
 
-#: ../ui/mainmenubar.xml:250
+#: ../ui/mainmenubar.xml:249
 msgid "_Bottom to Top"
 msgstr "De _baix cap amunt"
 
-#: ../ui/mainmenubar.xml:257
+#: ../ui/mainmenubar.xml:256
 msgid "_Cols/Rows"
 msgstr "_Columnes/Files"
 
-#: ../ui/mainmenubar.xml:260
+#: ../ui/mainmenubar.xml:259
 msgid "Set Columns"
 msgstr "Estableix les columnes"
 
-#: ../ui/mainmenubar.xml:264
+#: ../ui/mainmenubar.xml:263
 msgid "_1 Column"
 msgstr "_1 columna"
 
-#: ../ui/mainmenubar.xml:269
+#: ../ui/mainmenubar.xml:268
 msgid "_2 Columns"
 msgstr "_2 columnes"
 
-#: ../ui/mainmenubar.xml:274
+#: ../ui/mainmenubar.xml:273
 msgid "_3 Columns"
 msgstr "_3 columnes"
 
-#: ../ui/mainmenubar.xml:279
+#: ../ui/mainmenubar.xml:278
 msgid "_4 Columns"
 msgstr "_4 columnes"
 
-#: ../ui/mainmenubar.xml:284
+#: ../ui/mainmenubar.xml:283
 msgid "_5 Columns"
 msgstr "_5 columnes"
 
-#: ../ui/mainmenubar.xml:289
+#: ../ui/mainmenubar.xml:288
 msgid "_6 Columns"
 msgstr "_6 columnes"
 
-#: ../ui/mainmenubar.xml:294
+#: ../ui/mainmenubar.xml:293
 msgid "_7 Columns"
 msgstr "_7 columnes"
 
-#: ../ui/mainmenubar.xml:299
+#: ../ui/mainmenubar.xml:298
 msgid "_8 Columns"
 msgstr "_8 columnes"
 
-#: ../ui/mainmenubar.xml:306
+#: ../ui/mainmenubar.xml:305
 msgid "Set Rows"
 msgstr "Estableix les files"
 
-#: ../ui/mainmenubar.xml:310
+#: ../ui/mainmenubar.xml:309
 msgid "_1 Row"
 msgstr "_1 fila"
 
-#: ../ui/mainmenubar.xml:315
+#: ../ui/mainmenubar.xml:314
 msgid "_2 Rows"
 msgstr "_2 files"
 
-#: ../ui/mainmenubar.xml:320
+#: ../ui/mainmenubar.xml:319
 msgid "_3 Rows"
 msgstr "_3 files"
 
-#: ../ui/mainmenubar.xml:325
+#: ../ui/mainmenubar.xml:324
 msgid "_4 Rows"
 msgstr "_4 files"
 
-#: ../ui/mainmenubar.xml:330
+#: ../ui/mainmenubar.xml:329
 msgid "_5 Rows"
 msgstr "_5 files"
 
-#: ../ui/mainmenubar.xml:335
+#: ../ui/mainmenubar.xml:334
 msgid "_6 Rows"
 msgstr "_6 files"
 
-#: ../ui/mainmenubar.xml:340
+#: ../ui/mainmenubar.xml:339
 msgid "_7 Rows"
 msgstr "_7 files"
 
-#: ../ui/mainmenubar.xml:345
+#: ../ui/mainmenubar.xml:344
 msgid "_8 Rows"
 msgstr "_8 files"
 
-#: ../ui/mainmenubar.xml:356
+#: ../ui/mainmenubar.xml:355
 msgid "Zoom In"
 msgstr "Apropa"
 
-#: ../ui/mainmenubar.xml:361
+#: ../ui/mainmenubar.xml:360
 msgid "Zoom Out"
 msgstr "Allunya"
 
-#: ../ui/mainmenubar.xml:366
+#: ../ui/mainmenubar.xml:365
 msgid "Normal Size"
 msgstr "Mida normal"
 
-#: ../ui/mainmenubar.xml:370
+#: ../ui/mainmenubar.xml:369
 msgid "Zoom to Fit"
 msgstr "Ajusta"
 
-#: ../ui/mainmenubar.xml:376
+#: ../ui/mainmenubar.xml:375
 msgid "_Navigation"
-msgstr "_Navegació"
+msgstr "_Navega"
 
-#: ../ui/mainmenubar.xml:379
+#: ../ui/mainmenubar.xml:378
 msgid "_First Page"
 msgstr "_Primera pàgina"
 
-#: ../ui/mainmenubar.xml:384
+#: ../ui/mainmenubar.xml:383
 msgid "_Previous Page"
 msgstr "Pàgina _anterior"
 
-#: ../ui/mainmenubar.xml:389
+#: ../ui/mainmenubar.xml:388
 msgid "_Goto Page"
 msgstr "_Vés a la pàgina"
 
-#: ../ui/mainmenubar.xml:394
+#: ../ui/mainmenubar.xml:393
 msgid "_Next Page"
 msgstr "Pàgina _següent"
 
-#: ../ui/mainmenubar.xml:399
+#: ../ui/mainmenubar.xml:398
 msgid "_Last Page"
 msgstr "Ú_ltima pàgina"
 
-#: ../ui/mainmenubar.xml:406
+#: ../ui/mainmenubar.xml:405
 msgid "_Previous Layer"
 msgstr "Capa _anterior"
 
-#: ../ui/mainmenubar.xml:411
+#: ../ui/mainmenubar.xml:410
 msgid "_Next Layer"
 msgstr "Capa _següent"
 
-#: ../ui/mainmenubar.xml:416
+#: ../ui/mainmenubar.xml:415
 msgid "_Top Layer"
 msgstr "Capa _superior"
 
-#: ../ui/mainmenubar.xml:422
+#: ../ui/mainmenubar.xml:421
 msgid "N_ext Annotated Page"
 msgstr "Pàgina comentada s_egüent"
 
-#: ../ui/mainmenubar.xml:427
+#: ../ui/mainmenubar.xml:426
 msgid "P_revious Annotated Page"
 msgstr "Pàgina comentada an_terior"
 
-#: ../ui/mainmenubar.xml:434
-msgid "_Journal"
-msgstr "_Quadern"
-
-#: ../ui/mainmenubar.xml:437
+#: ../ui/mainmenubar.xml:436
 msgid "New Page _Before"
-msgstr "Pàgina nova _abans"
+msgstr "Afegeix una pàgina nova _abans"
 
-#: ../ui/mainmenubar.xml:441
+#: ../ui/mainmenubar.xml:440
 msgid "New Page _After"
-msgstr "Pàgina nova _després"
+msgstr "Afegeix una pàgina nova _després"
 
-#: ../ui/mainmenubar.xml:446
+#: ../ui/mainmenubar.xml:445
 msgid "New Page at _End"
-msgstr "Pàgina nova al _final"
+msgstr "Afegeix una pàgina nova al _final"
 
-#: ../ui/mainmenubar.xml:450
+#: ../ui/mainmenubar.xml:449
 msgid "Duplicate Page"
 msgstr "Duplica la pàgina"
 
-#: ../ui/mainmenubar.xml:454
+#: ../ui/mainmenubar.xml:453
 msgid "Append New PDF Pages"
 msgstr "Afegeix pàgines PDF noves"
 
-#: ../ui/mainmenubar.xml:458
+#: ../ui/mainmenubar.xml:457
 msgid "Configure Page Template"
 msgstr "Configura la plantilla de pàgina"
 
-#: ../ui/mainmenubar.xml:462
+#: ../ui/mainmenubar.xml:461
 msgid "_Delete Page"
 msgstr "_Elimina la pàgina"
 
-#: ../ui/mainmenubar.xml:469
+#: ../ui/mainmenubar.xml:468
 msgid "New _Layer"
 msgstr "_Capa nova"
 
-#: ../ui/mainmenubar.xml:474
+#: ../ui/mainmenubar.xml:473
 msgid "Delete Layer"
-msgstr "Elimina una capa"
+msgstr "Elimina la capa"
 
-#: ../ui/mainmenubar.xml:479
+#: ../ui/mainmenubar.xml:478
 msgid "Merge Layer Down"
 msgstr "Fusiona la capa cap avall"
 
-#: ../ui/mainmenubar.xml:484
+#: ../ui/mainmenubar.xml:483
 msgid "Rename Layer"
 msgstr "Canvia el nom de la capa"
 
-#: ../ui/mainmenubar.xml:491
+#: ../ui/mainmenubar.xml:490
 msgid "Paper _Format"
 msgstr "_Format de paper"
 
-#: ../ui/mainmenubar.xml:495
+#: ../ui/mainmenubar.xml:494
 msgid "Paper _Color"
 msgstr "_Color del paper"
 
-#: ../ui/mainmenubar.xml:499
-msgid "Paper B_ackground"
-msgstr "_Fons del paper"
-
-#: ../ui/mainmenubar.xml:504
+#: ../ui/mainmenubar.xml:503
 msgid "_Tools"
 msgstr "_Eines"
 
-#: ../ui/mainmenubar.xml:507
+#: ../ui/mainmenubar.xml:506
 msgid "_Pen"
 msgstr "_Llapis"
 
-#: ../ui/mainmenubar.xml:513
+#: ../ui/mainmenubar.xml:512
 msgid "_Eraser"
 msgstr "_Goma d'esborrar"
 
-#: ../ui/mainmenubar.xml:519
+#: ../ui/mainmenubar.xml:518
 msgid "Select Linear Text"
-msgstr "Selecciona text lineal"
+msgstr "Selecciona text en línia"
 
-#: ../ui/mainmenubar.xml:525
+#: ../ui/mainmenubar.xml:524
 msgid "Select Text In Rectangle"
 msgstr "Selecciona el text en un rectangle"
 
-#: ../ui/mainmenubar.xml:531
+#: ../ui/mainmenubar.xml:530
 msgid "_Highlighter"
 msgstr "_Subratllador"
 
-#: ../ui/mainmenubar.xml:537
+#: ../ui/mainmenubar.xml:536
 msgid "_Text"
 msgstr "_Text"
 
-#: ../ui/mainmenubar.xml:543
+#: ../ui/mainmenubar.xml:542
 msgid "_Image"
 msgstr "_Imatge"
 
-#: ../ui/mainmenubar.xml:549
+#: ../ui/mainmenubar.xml:548
 msgid "_Default Tool"
 msgstr "Eina per _defecte"
 
-#: ../ui/mainmenubar.xml:556
+#: ../ui/mainmenubar.xml:555
 msgid "Drawing Type"
 msgstr "Tipus de dibuix"
 
-#: ../ui/mainmenubar.xml:558
+#: ../ui/mainmenubar.xml:557
 msgid "_Shape Recognizer"
 msgstr "_Reconeixedor de traços"
 
-#: ../ui/mainmenubar.xml:583
-msgid "Draw Coordinate System"
-msgstr "Dibuixa sistemes de coordenades"
-
-#: ../ui/mainmenubar.xml:588
+#: ../ui/mainmenubar.xml:587
 msgid "Draw _Line"
 msgstr "Dibuixa _línies"
 
-#: ../ui/mainmenubar.xml:629
+#: ../ui/mainmenubar.xml:628
 msgid "_Vertical Space"
 msgstr "Espai _vertical"
 
-#: ../ui/mainmenubar.xml:641
+#: ../ui/mainmenubar.xml:640
 msgid "H_and Tool"
 msgstr "Eina _mà"
 
-#: ../ui/mainmenubar.xml:657
+#: ../ui/mainmenubar.xml:656
 msgid "Pen _Options"
 msgstr "Opcions del lla_pis"
 
-#: ../ui/mainmenubar.xml:660 ../ui/mainmenubar.xml:722
-#: ../ui/mainmenubar.xml:769
+#: ../ui/mainmenubar.xml:659 ../ui/mainmenubar.xml:721
+#: ../ui/mainmenubar.xml:768
 msgid "_very fine"
-msgstr "_molt fi"
+msgstr "_Molt fi"
 
-#: ../ui/mainmenubar.xml:665 ../ui/mainmenubar.xml:727
-#: ../ui/mainmenubar.xml:774
+#: ../ui/mainmenubar.xml:664 ../ui/mainmenubar.xml:726
+#: ../ui/mainmenubar.xml:773
 msgid "_fine"
-msgstr "_fi"
+msgstr "_Fi"
 
-#: ../ui/mainmenubar.xml:670 ../ui/mainmenubar.xml:732
-#: ../ui/mainmenubar.xml:779
+#: ../ui/mainmenubar.xml:669 ../ui/mainmenubar.xml:731
+#: ../ui/mainmenubar.xml:778
 msgid "_medium"
-msgstr "_mitjà"
+msgstr "_Normal"
 
-#: ../ui/mainmenubar.xml:675 ../ui/mainmenubar.xml:737
-#: ../ui/mainmenubar.xml:784
+#: ../ui/mainmenubar.xml:674 ../ui/mainmenubar.xml:736
+#: ../ui/mainmenubar.xml:783
 msgid "_thick"
-msgstr "_gruixut"
+msgstr "_Gruixut"
 
-#: ../ui/mainmenubar.xml:680 ../ui/mainmenubar.xml:742
-#: ../ui/mainmenubar.xml:789
+#: ../ui/mainmenubar.xml:679 ../ui/mainmenubar.xml:741
+#: ../ui/mainmenubar.xml:788
 msgid "ver_y thick"
-msgstr "mol_t gruixut"
+msgstr "Mol_t gruixut"
 
-#: ../ui/mainmenubar.xml:709 ../ui/mainmenubar.xml:796
+#: ../ui/mainmenubar.xml:708 ../ui/mainmenubar.xml:795
 msgid "Fi_ll"
 msgstr "_Omple"
 
-#: ../ui/mainmenubar.xml:713 ../ui/mainmenubar.xml:800
+#: ../ui/mainmenubar.xml:712 ../ui/mainmenubar.xml:799
 msgid "Fill opacity"
 msgstr "Opacitat del farciment"
 
-#: ../ui/mainmenubar.xml:719
+#: ../ui/mainmenubar.xml:718
 msgid "Eraser Optio_ns"
 msgstr "Opcions de la goma d'es_borrar"
 
-#: ../ui/mainmenubar.xml:749
+#: ../ui/mainmenubar.xml:748
 msgid "_standard"
-msgstr "_estàndard"
+msgstr "_Estàndard"
 
-#: ../ui/mainmenubar.xml:754
+#: ../ui/mainmenubar.xml:753
 msgid "_whiteout"
-msgstr "_pinta (com si fos líquid corrector)"
+msgstr "_Pinta (com si fos líquid corrector)"
 
-#: ../ui/mainmenubar.xml:759
+#: ../ui/mainmenubar.xml:758
 msgid "_delete strokes"
-msgstr "_esborra traços"
+msgstr "_Esborra traços sencers"
 
-#: ../ui/mainmenubar.xml:766
+#: ../ui/mainmenubar.xml:765
 msgid "Highlighter Opti_ons"
 msgstr "_Opcions del subratllador"
 
-#: ../ui/mainmenubar.xml:806
+#: ../ui/mainmenubar.xml:805
 msgid "Select PDF Text Options"
-msgstr "Selecciona les opcions del text PDF"
+msgstr "Opcions del text PDF"
 
-#: ../ui/mainmenubar.xml:809
+#: ../ui/mainmenubar.xml:808
 msgid "Marker Opacity"
 msgstr "Opacitat del subratllador"
 
-#: ../ui/mainmenubar.xml:815
+#: ../ui/mainmenubar.xml:814
 msgid "Text Font..."
 msgstr "Tipus de lletra..."
 
-#: ../ui/mainmenubar.xml:820
+#: ../ui/mainmenubar.xml:819
 msgid "Record / Stop"
 msgstr "Grava/Para"
 
-#: ../ui/mainmenubar.xml:825
+#: ../ui/mainmenubar.xml:824
 msgid "Pause"
 msgstr "Posa en pausa"
 
-#: ../ui/mainmenubar.xml:852
+#: ../ui/mainmenubar.xml:851
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: ../ui/mainmenubar.xml:856
+#: ../ui/mainmenubar.xml:855
 msgid "Help"
 msgstr "Ajuda"
 
-#: ../ui/mainmenubar.xml:860
+#: ../ui/mainmenubar.xml:859
+msgid "Run Gtk3 demo"
+msgstr "Executa la demostració Gtk3"
+
+#: ../ui/mainmenubar.xml:863
 msgid "About"
 msgstr "Quant a"
 
@@ -4274,13 +4326,13 @@ msgstr "Pren notes a mà"
 msgid "tablet;Wacom;pen input;PDF Annotation;markup"
 msgstr "tablet;Wacom;pen input;PDF Annotation;markup"
 
-#: ../desktop/com.github.xournalpp.xournalpp.desktop.in:15
-msgid "com.github.xournalpp.xournalpp"
-msgstr "com.github.xournalpp.xournalpp"
+#: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:8
+msgid "Xournalpp Developers"
+msgstr "Desenvolupadors del Xournalpp"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:10
 msgid "Xournal++ is a hand note-taking software written in C++ with the target of flexibility, functionality and speed. Stroke recognizer and other parts are based on Xournal Code, which you can find at sourceforge. It supports GNU/Linux (e.g. Ubuntu, Debian, Arch, SUSE), macOS and Windows. Supports pen input from devices such as Wacom Tablets."
-msgstr "El Xournal++ és un programari per a prendre notes a mà escrit en C++ i que pretén ser ràpid, flexible i funcional. El reconeixedor de traços i altres parts es basen en el codi del Xournal, que podeu trobar al sourceforge. Suporta GNU/Linux (Ubuntu, Debia, Arch i SUSE), macOS i Windows. Adment entrades a través de llapis òptics com ara les tauletes Wacom."
+msgstr "El Xournal++ és un programari per a prendre notes a mà escrit en C++ i que pretén ser ràpid, flexible i funcional. El reconeixedor de traços i altres parts es basen en el codi del Xournal, que podeu trobar al sourceforge. Suporta GNU/Linux (Ubuntu, Debia, Arch i SUSE), macOS i Windows. Admet entrades a través de llapis òptics, com ara els de les tauletes Wacom."
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:17
 msgid "Xournal++ features:"
@@ -4296,19 +4348,19 @@ msgstr "Fons de paper amb guies per a prendre notes o fer esbossos"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:23
 msgid "Annotate on top of PDFs"
-msgstr "Escriure comentaris a sobre de fitxers PDF"
+msgstr "Permet escriure comentaris a sobre de fitxers PDF"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:24
 msgid "Select text from the background PDF, copy, highlight or underline it or strike it through"
-msgstr "Seleccionar, copiar, tatxar, ressaltar o subratllar text del PDF de fons"
+msgstr "Permet seleccionar, copiar, tatxar, ressaltar o subratllar text del PDF de fons"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:25
 msgid "Follow links from the background PDF"
-msgstr "Seguir els enllaços del PDF de fons"
+msgstr "Permet obrir els enllaços del PDF de fons"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:26
 msgid "Export to a variety of formats including SVG, PNG and PDF, both from the GUI and command line"
-msgstr "Exportar a diversos formats com ara SVG, PNG i PDF, tant des de la interfície gràfica com de la línia de comandes"
+msgstr "Conversió a diversos formats com ara SVG, PNG i PDF, tant des de la interfície gràfica com de la línia de comandes"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:27
 msgid "Different drawing tools (e.g. pen, highlighter) and stroke styles (e.g. solid, dotted)"
@@ -4360,7 +4412,7 @@ msgstr "Barra lateral amb previsualitzacions de les pàgines i ordenació avanç
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:39
 msgid "Allows mapping different tools/colors etc. to stylus/mouse buttons"
-msgstr "Establir el comportament dels diferents botons del ratolí/llapis i associar-los a eines o colors"
+msgstr "Permet establir el comportament dels diferents botons del ratolí/llapis i associar-los a eines o colors"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:40
 msgid "Customizable toolbar with multiple configurations, e.g. to optimize toolbar for portrait/landscape"
@@ -4384,11 +4436,23 @@ msgstr "Gravació i reproducció d'àudio juntament amb notes escrites"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:45
 msgid "Multi language support (over 20 languages supported)"
-msgstr "Suport per a més de 20 idiomes (i podeu afegir el vostre)"
+msgstr "Suport per a més de 20 idiomes (i podeu afegir-hi el vostre)"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:46
 msgid "Plugins using Lua scripting"
 msgstr "Complements que fan servir scripts LUA"
+
+#: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:57
+msgid "Note taking"
+msgstr "Prendre notes"
+
+#: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:61
+msgid "PDF annotation"
+msgstr "Anotació de PDF"
+
+#: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:65
+msgid "LaTeX with customized preamble"
+msgstr "LaTeX amb preàmbul personalitzat"
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.xml.in:4
 msgid "Xournal note file"

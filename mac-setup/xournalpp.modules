@@ -13,9 +13,9 @@
 
   <cmake id="openjpeg">
     <branch repo="github-tarball"
-            module="uclouvain/openjpeg/archive/v2.5.0.tar.gz"
-            version="2.5.0"
-            checkoutdir="openjpeg-2.5.0"/>
+            module="uclouvain/openjpeg/archive/v2.5.3.tar.gz"
+            version="2.5.3"
+            checkoutdir="openjpeg-2.5.3"/>
   </cmake>
 
   <cmake id="poppler-data">
@@ -25,16 +25,13 @@
   </cmake>
 
   <!-- For poppler-glib -->
-  <cmake id="poppler" cmakeargs="-DENABLE_QT5=OFF -DENABLE_QT6=OFF -DENABLE_BOOST=OFF -DENABLE_CPP=OFF -DENABLE_LIBOPENJPEG=none -DENABLE_CMS=none -DCMAKE_INSTALL_NAME_DIR='&#36;&lt;INSTALL_PREFIX&gt;/lib'">
+  <cmake id="poppler" cmakeargs="-DENABLE_NSS3=off -DENABLE_GPGME=off -DENABLE_QT5=OFF -DENABLE_QT6=OFF -DBUILD_QT5_TESTS=off -DBUILD_QT6_TESTS=off -DBUILD_CPP_TESTS=off -DENABLE_LCMS=off -DENABLE_LIBCURL=off -DENABLE_BOOST=OFF -DENABLE_CPP=ON -DENABLE_CMS=none -DENABLE_LIBTIFF=off -DCMAKE_INSTALL_NAME_DIR='&#36;&lt;INSTALL_PREFIX&gt;/lib'">
     <branch repo="poppler"
-            version="23.07.0"
-            module="poppler-23.07.0.tar.xz"/>
+            version="25.01.0"
+            module="poppler-25.01.0.tar.xz"/>
     <dependencies>
-
-      <!-- openjpeg doesn't work with g-ir-scanner right now
+      <dep package="poppler-data"/>
       <dep package="openjpeg"/>
-      -->
-
     </dependencies>
   </cmake>
 
@@ -105,9 +102,36 @@
              makeinstallargs="INSTALL_TOP='$(DESTDIR)/${prefix}' install"
   >
     <branch repo="lua"
-            version="5.4.6"
-            module="lua-5.4.6.tar.gz"
-            checkoutdir="lua-5.4.6"/>
+            version="5.4.7"
+            module="lua-5.4.7.tar.gz"
+            checkoutdir="lua-5.4.7"/>
+  </autotools>
+
+  <autotools id="lua-lgi"
+             skip-autogen="true"
+             supports-non-srcdir-builds="no"
+             makeinstallargs='LUA_VERSION=5.4 PREFIX="${prefix}" install'
+  >
+    <branch repo="github-tarball"
+            module="lgi-devs/lgi/archive/refs/tags/0.9.2.tar.gz"
+            version="0.9.2"
+            checkoutdir="lgi-0.9.2">
+      <patch file="https://github.com/pavouk/lgi/pull/249.patch"
+            strip="1"
+      />
+      <patch file="https://github.com/pavouk/lgi/pull/331.patch"
+            strip="1"
+      />
+      <patch file="https://github.com/pavouk/lgi/pull/273.patch"
+            strip="1"
+      />
+      <patch file="https://github.com/pavouk/lgi/pull/313.patch"
+            strip="1"
+      />
+    </branch>
+    <dependencies>
+      <dep package="lua"/>
+    </dependencies>
   </autotools>
 
   <metamodule id="meta-xournalpp-deps">
@@ -116,7 +140,7 @@
       <dep package="libzip"/>
       <dep package="portaudio"/>
       <dep package="libsndfile"/>
-      <dep package="lua"/>
+      <dep package="lua-lgi"/>
     </dependencies>
   </metamodule>
 
